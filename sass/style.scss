@@ -9,7 +9,10 @@ $border: 1;
     @import "position/_header";
 
 /// service ///
-    @import "position/service";
+    @import "position/_service";
 
 /// deroulement ///
-    @import "position/deroulement";
+    @import "position/_deroulement";
+
+/// competance ///
+    @import "position/_competance";
