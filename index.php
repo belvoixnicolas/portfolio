@@ -1,4 +1,5 @@
 <?php
+    // test push github //
     if (isset($_GET['page'])) {
         echo "variable get: " . $_GET['page']; 
     }else {
