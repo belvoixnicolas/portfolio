@@ -820,5 +820,6 @@ header {
   /* line 22, ../../sass/position/_description.scss */
   #description p {
     border: 1px solid black;
+    align-self: center;
     text-align: center;
     font-size: 2.25rem; }
