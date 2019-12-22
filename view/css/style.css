@@ -823,3 +823,18 @@ header {
     align-self: center;
     text-align: center;
     font-size: 2.25rem; }
+
+/* line 1, ../../sass/position/_contact.scss */
+#contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  row-gap: 5vh;
+  min-height: 100vh;
+  padding: 2vh 2vw;
+  border: 1px solid black; }
+  /* line 13, ../../sass/position/_contact.scss */
+  #contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    border: 1px solid black; }
