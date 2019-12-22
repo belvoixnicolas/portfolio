@@ -384,37 +384,38 @@ nav {
   justify-content: space-between;
   width: 100%;
   padding: 2vh 2vw;
+  z-index: 1;
   border: 1px solid black; }
-  /* line 16, ../../sass/position/_nav.scss */
+  /* line 17, ../../sass/position/_nav.scss */
   nav img {
     height: auto;
     width: 5vw; }
-  /* line 21, ../../sass/position/_nav.scss */
+  /* line 22, ../../sass/position/_nav.scss */
   nav ul {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
     border: 1px solid black; }
-    /* line 31, ../../sass/position/_nav.scss */
+    /* line 32, ../../sass/position/_nav.scss */
     nav ul li {
       font-size: 1.75rem;
       border: 1px solid black; }
-      /* line 38, ../../sass/position/_nav.scss */
+      /* line 39, ../../sass/position/_nav.scss */
       nav ul li a {
         padding: 1vh 2vw;
         border: 1px solid black; }
-  /* line 48, ../../sass/position/_nav.scss */
+  /* line 49, ../../sass/position/_nav.scss */
   nav #menuburger {
     display: none; }
   @media all and (max-width: 704px) {
-    /* line 53, ../../sass/position/_nav.scss */
+    /* line 54, ../../sass/position/_nav.scss */
     nav {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content max-content;
       padding: 0; }
-      /* line 59, ../../sass/position/_nav.scss */
+      /* line 60, ../../sass/position/_nav.scss */
       nav img {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
@@ -423,7 +424,7 @@ nav {
         height: 5vh;
         width: auto;
         margin: 2vh 2vw; }
-      /* line 69, ../../sass/position/_nav.scss */
+      /* line 70, ../../sass/position/_nav.scss */
       nav #menuburger {
         display: initial;
         grid-column: -1 / -2;
@@ -433,25 +434,25 @@ nav {
         font-size: 2rem;
         margin: 2vh 2vw;
         padding: 2vw 2vw; }
-      /* line 80, ../../sass/position/_nav.scss */
+      /* line 81, ../../sass/position/_nav.scss */
       nav ul {
         grid-column: 1 / -1;
         grid-row: -1 / -2;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: repeat(min-content, 3); }
-        /* line 88, ../../sass/position/_nav.scss */
+        /* line 89, ../../sass/position/_nav.scss */
         nav ul li {
           font-size: 1.8rem;
           text-align: center; }
-          /* line 92, ../../sass/position/_nav.scss */
+          /* line 93, ../../sass/position/_nav.scss */
           nav ul li a {
             display: inline-block;
             padding: 0;
             width: 100%;
             padding: 1.5vh 1vw; } }
   @media all and (max-width: 245px) {
-    /* line 104, ../../sass/position/_nav.scss */
+    /* line 105, ../../sass/position/_nav.scss */
     nav ul {
       grid-template-columns: 100%;
       grid-template-rows: repeat(min-content, 6); } }

@@ -8,6 +8,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     padding: 2vh 2vw;
+    z-index: 1;
 
     @if $border == 1 {
         border: 1px solid black;
