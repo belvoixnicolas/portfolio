@@ -23,5 +23,55 @@
         @if $border == 1 {
             border: 1px solid black;
         }
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 25vh;
+        grid-auto-rows: 25vh;
+        column-gap: 5vw;
+        row-gap: 5vh;
+        align-self: center;
+
+
+        section {
+            @if $border == 1 {
+                border: 1px solid black;
+            }
+
+            position: relative;
+
+            h3 {
+                @if $border == 1 {
+                    border: 1px solid black;
+                }
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                padding: 1vh 2vw;
+                font-size: 2rem;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+
+            span {
+                @if $border == 1 {
+                    border: 1px solid black;
+                }
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                padding: 0.5vh 2vw;
+                font-size: 1.5rem;
+            }
+        }
     }
 }
