@@ -25,13 +25,30 @@
         }
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 25vh;
         grid-auto-rows: 25vh;
         column-gap: 5vw;
         row-gap: 5vh;
         align-self: center;
 
+        @media all and (max-width: 1050px) {
+            & {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media all and (max-width: 800px) {
+            & {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media all and (max-width: 500px) {
+            & {
+                grid-template-columns: 1fr;
+            }
+        }
 
         section {
             @if $border == 1 {
@@ -39,10 +56,32 @@
             }
 
             position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            &:hover > h3 {
+                @if $border == 1 {
+                    border: 1px solid black;
+                }
+
+                padding: 1vh 2vw;
+                font-size: 2rem;
+            }
+
+            &:hover > span {
+                @if $border == 1 {
+                    border: 1px solid black;
+                }
+
+                padding: 0.5vh 2vw;
+                font-size: 1.5rem;
+            }
 
             h3 {
                 @if $border == 1 {
-                    border: 1px solid black;
+                    background: white;
                 }
 
                 position: absolute;
@@ -50,18 +89,14 @@
                 left: 0;
                 right: 0;
                 text-align: center;
-                padding: 1vh 2vw;
-                font-size: 2rem;
-            }
-
-            img {
-                height: 100%;
-                width: 100%;
+                padding: 0 2vw;
+                border-width: 0;
+                font-size: 0rem;
             }
 
             span {
                 @if $border == 1 {
-                    border: 1px solid black;
+                    background: white;
                 }
 
                 position: absolute;
@@ -69,8 +104,13 @@
                 left: 0;
                 right: 0;
                 text-align: center;
-                padding: 0.5vh 2vw;
-                font-size: 1.5rem;
+                padding: 0vh 2vw;
+                border-width: 0;
+                font-size: 0rem;
+            }
+
+            h3, span {
+                transition: .5s;
             }
         }
     }

@@ -1,25 +1,22 @@
 <article id="portfolio">
     <h2>Portfolio</h2>
     <div class="sites">
-        <section>
+        <section data-site="site_1.jpg">
             <h3>Titre site</h3>
-            <img src="https://via.placeholder.com/100?text=image_site" alt="image site">
             <span>tag / tag / tag</span>
         </section>
-        <section>
+        <section data-site="site_2.jpg">
             <h3>Titre site</h3>
-            <img src="https://via.placeholder.com/100?text=image_site" alt="image site">
             <span>tag / tag / tag</span>
         </section>
-        <section>
+        <section data-site="site_3.png">
             <h3>Titre site</h3>
-            <img src="https://via.placeholder.com/100?text=image_site" alt="image site">
             <span>tag / tag / tag</span>
         </section>
-        <section>
+        <section data-site="site_4.jpg">
             <h3>Titre site</h3>
-            <img src="https://via.placeholder.com/100?text=image_site" alt="image site">
             <span>tag / tag / tag</span>
         </section>
     </div>
 </article>
+<script src="view\js\portfolio_backgroud.js"></script>
