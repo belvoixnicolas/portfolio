@@ -827,14 +827,120 @@ header {
 /* line 1, ../../sass/position/_contact.scss */
 #contact {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr;
+  column-gap: 5vw;
   row-gap: 5vh;
   min-height: 100vh;
   padding: 2vh 2vw;
   border: 1px solid black; }
-  /* line 13, ../../sass/position/_contact.scss */
+  @media all and (max-width: 770px) {
+    /* line 15, ../../sass/position/_contact.scss */
+    #contact {
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content auto; }
+    /* line 20, ../../sass/position/_contact.scss */
+    #contact menu {
+      display: flex !important; }
+    /* line 24, ../../sass/position/_contact.scss */
+    #contact .hidden {
+      display: none; } }
+  /* line 29, ../../sass/position/_contact.scss */
   #contact h2 {
+    grid-column: 1 / -1;
     text-align: center;
     font-size: 3rem;
     border: 1px solid black; }
+  /* line 39, ../../sass/position/_contact.scss */
+  #contact menu {
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border: 1px solid black; }
+    /* line 48, ../../sass/position/_contact.scss */
+    #contact menu button {
+      margin: 0 2vw;
+      padding: 1vh 2vw;
+      font-size: 1.5rem; }
+  /* line 55, ../../sass/position/_contact.scss */
+  #contact section {
+    border: 1px solid black; }
+  /* line 62, ../../sass/position/_contact.scss */
+  #contact .contact h3 {
+    display: none; }
+  /* line 66, ../../sass/position/_contact.scss */
+  #contact .contact ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 100%;
+    border: 1px solid black; }
+    /* line 77, ../../sass/position/_contact.scss */
+    #contact .contact ul li {
+      margin: 2vh 2vw;
+      padding: 2vh 2vw;
+      border: 1px solid black; }
+      /* line 85, ../../sass/position/_contact.scss */
+      #contact .contact ul li h4 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2vh;
+        border: 1px solid black; }
+      /* line 95, ../../sass/position/_contact.scss */
+      #contact .contact ul li p {
+        font-size: 1.5rem;
+        border: 1px solid black; }
+  /* line 106, ../../sass/position/_contact.scss */
+  #contact .formulaire {
+    padding: 2vh 2vw; }
+    /* line 109, ../../sass/position/_contact.scss */
+    #contact .formulaire h3 {
+      display: none; }
+    /* line 113, ../../sass/position/_contact.scss */
+    #contact .formulaire form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, min-content) 40% min-content 1fr;
+      column-gap: 2vw;
+      row-gap: 3vh;
+      height: 100%;
+      border: 1px solid black; }
+      /* line 125, ../../sass/position/_contact.scss */
+      #contact .formulaire form input {
+        justify-self: stretch;
+        align-self: center;
+        padding: 1vh 1vw;
+        font-size: 2rem;
+        overflow: hidden; }
+      /* line 133, ../../sass/position/_contact.scss */
+      #contact .formulaire form #nom {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1; }
+      /* line 138, ../../sass/position/_contact.scss */
+      #contact .formulaire form #prenom {
+        grid-column: -1 / -2;
+        grid-row: 1 / span 1; }
+      /* line 143, ../../sass/position/_contact.scss */
+      #contact .formulaire form #mail {
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1; }
+      /* line 148, ../../sass/position/_contact.scss */
+      #contact .formulaire form #text {
+        grid-column: 1 / -1;
+        grid-row: 3 / span 1;
+        padding: 1vh 1vw;
+        font-size: 1.5rem; }
+      /* line 155, ../../sass/position/_contact.scss */
+      #contact .formulaire form .g-recaptcha {
+        grid-column: 1 / -1;
+        grid-row: 4 / span 1;
+        justify-self: center;
+        align-self: center; }
+      /* line 162, ../../sass/position/_contact.scss */
+      #contact .formulaire form input[type=submit] {
+        grid-column: 1 / -1;
+        grid-row: 5 / span 1;
+        justify-self: center;
+        align-self: center;
+        width: 50%; }
