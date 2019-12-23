@@ -1,7 +1,7 @@
 <nav>
     <img src="view/src/logo/logo.svg" alt="Logo site web">
 
-    <ul>
+    <ul class="hidden">
         <li>
             <a href="#service">services</a>
         </li>
@@ -26,3 +26,4 @@
         <i class="fas fa-bars"></i>
     </button>
 </nav>
+<script src="view\js\nav_menuburger.js"></script>

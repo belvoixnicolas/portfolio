@@ -441,22 +441,25 @@ nav {
         grid-row: -1 / -2;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(min-content, 3); }
+        grid-template-rows: repeat(3, min-content); }
         /* line 89, ../../sass/position/_nav.scss */
+        nav ul[class='hidden'] {
+          display: none; }
+        /* line 93, ../../sass/position/_nav.scss */
         nav ul li {
           font-size: 1.8rem;
           text-align: center; }
-          /* line 93, ../../sass/position/_nav.scss */
+          /* line 97, ../../sass/position/_nav.scss */
           nav ul li a {
             display: inline-block;
             padding: 0;
             width: 100%;
             padding: 1.5vh 1vw; } }
   @media all and (max-width: 245px) {
-    /* line 105, ../../sass/position/_nav.scss */
+    /* line 109, ../../sass/position/_nav.scss */
     nav ul {
       grid-template-columns: 100%;
-      grid-template-rows: repeat(min-content, 6); } }
+      grid-template-rows: repeat(6, min-content); } }
 
 /* line 1, ../../sass/position/_header.scss */
 header {

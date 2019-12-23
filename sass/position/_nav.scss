@@ -84,7 +84,11 @@ nav {
 
                 display: grid;
                 grid-template-columns: 50% 50%;
-                grid-template-rows: repeat(min-content, 3);
+                grid-template-rows: repeat(3, min-content);
+
+                &[class='hidden'] {
+                    display: none;
+                }
 
                 li {
                     font-size: 1.8rem;
@@ -104,7 +108,7 @@ nav {
     @media all and (max-width: 245px) {
         ul {
             grid-template-columns: 100%;
-            grid-template-rows: repeat(min-content, 6);
+            grid-template-rows: repeat(6, min-content);
         }
     }
 }
