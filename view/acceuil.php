@@ -15,12 +15,19 @@
         <?php include "view/layout/portfolio.php"; ?>
         <?php include "view/layout/description.php"; ?>
         <?php include "view/layout/contact.php"; ?>
-
-        <!-- ASSIDE -->
-        <?php include "view/layout/site_info.php"; ?>
     </main>
 
     <!-- FOOTER -->
     <?php include "view/layout/footer.php"; ?>
+
+    <!-- ASSIDE -->
+    <?php include "view/layout/site_info.php"; ?>
 </body>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        speedAsDuration: true,
+        easing: 'easeInOutCubic'
+    });
+</script>
 </html>

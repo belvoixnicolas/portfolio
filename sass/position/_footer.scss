@@ -1,0 +1,19 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+
+    @if $border == 1 {
+        border: 1px solid black;
+    } 
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    p::before {
+        content: "\0000A9  " ;
+        font-size: 2rem;
+    }
+}

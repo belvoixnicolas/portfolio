@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -944,3 +945,18 @@ header {
         justify-self: center;
         align-self: center;
         width: 50%; }
+
+/* line 1, ../../sass/position/_footer.scss */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  border: 1px solid black; }
+  /* line 11, ../../sass/position/_footer.scss */
+  footer p {
+    font-size: 1.5rem; }
+  /* line 15, ../../sass/position/_footer.scss */
+  footer p::before {
+    content: "© ";
+    font-size: 2rem; }

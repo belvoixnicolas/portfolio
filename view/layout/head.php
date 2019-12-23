@@ -23,4 +23,5 @@
 
     <script src="https://kit.fontawesome.com/828b21001a.js" crossorigin="anonymous"></script>
     <script src="view/js/jquery_nonCompresser.js"></script>
+    <script src="view\js\smooth-scroll.min.js"></script>
 </head>
