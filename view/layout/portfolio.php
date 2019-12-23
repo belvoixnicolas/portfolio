@@ -20,3 +20,4 @@
     </div>
 </article>
 <script src="view\js\portfolio_backgroud.js"></script>
+<script src="view\js\portfolio_focus.js"></script>

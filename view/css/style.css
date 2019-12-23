@@ -960,3 +960,16 @@ footer {
   footer p::before {
     content: "© ";
     font-size: 2rem; }
+
+/* line 1, ../../sass/position/_siteInfo.scss */
+#siteInfo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border: 1px solid black;
+  background: white; }
+  /* line 13, ../../sass/position/_siteInfo.scss */
+  #siteInfo[class=hidden] {
+    display: none; }

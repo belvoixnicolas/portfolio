@@ -1,0 +1,16 @@
+#siteInfo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    @if $border == 1 {
+        border: 1px solid black;
+        background: white;
+    } 
+
+    &[class=hidden] {
+        display: none;
+    }
+}

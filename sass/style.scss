@@ -24,7 +24,10 @@ $border: 1;
     @import "position/_description";
 
 /// contacter ///
-    @import"position/_contact";
+    @import "position/_contact";
 
 /// footer ///
     @import "position/_footer";
+
+/// site info ///
+    @import "position/_siteInfo";
