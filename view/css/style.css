@@ -3,6 +3,7 @@
    v2.0-modified | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro:300,400&display=swap");
 /* line 6, ../../sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -385,8 +386,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   padding: 2vh 2vw;
-  z-index: 1;
-  border: 1px solid black; }
+  z-index: 1; }
   /* line 17, ../../sass/position/_nav.scss */
   nav img {
     height: auto;
@@ -396,16 +396,13 @@ nav {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
-    border: 1px solid black; }
+    justify-content: center; }
     /* line 32, ../../sass/position/_nav.scss */
     nav ul li {
-      font-size: 1.75rem;
-      border: 1px solid black; }
+      font-size: 1.75rem; }
       /* line 39, ../../sass/position/_nav.scss */
       nav ul li a {
-        padding: 1vh 2vw;
-        border: 1px solid black; }
+        padding: 1vh 2vw; }
   /* line 49, ../../sass/position/_nav.scss */
   nav #menuburger {
     display: none; }
@@ -468,8 +465,7 @@ header {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  padding: 2vh 2vw;
-  border: 1px solid black; }
+  padding: 2vh 2vw; }
   /* line 13, ../../sass/position/_header.scss */
   header > * {
     margin: 1vh 0; }
@@ -483,8 +479,7 @@ header {
   /* line 26, ../../sass/position/_header.scss */
   header .scrool {
     height: 10vh;
-    width: auto;
-    border: 1px solid black; }
+    width: auto; }
 
 /* line 1, ../../sass/position/_service.scss */
 #service {
@@ -495,8 +490,7 @@ header {
   column-gap: 5vw;
   row-gap: 5vh;
   min-height: 100vh;
-  padding: 2vh 2vw;
-  border: 1px solid black; }
+  padding: 2vh 2vw; }
   @media all and (max-width: 704px) {
     /* line 1, ../../sass/position/_service.scss */
     #service {
@@ -513,8 +507,7 @@ header {
     grid-column: 1 / -1;
     grid-row: 1 / span 1;
     text-align: center;
-    font-size: 3rem;
-    border: 1px solid black; }
+    font-size: 3rem; }
   /* line 38, ../../sass/position/_service.scss */
   #service section {
     display: flex;
@@ -523,8 +516,7 @@ header {
     justify-self: center;
     align-items: center;
     align-self: center;
-    padding: 2vh 2vw;
-    border: 1px solid black; }
+    padding: 2vh 2vw; }
     /* line 51, ../../sass/position/_service.scss */
     #service section > * {
       margin-bottom: 5vh; }
@@ -538,12 +530,10 @@ header {
     /* line 64, ../../sass/position/_service.scss */
     #service section h3 {
       text-align: center;
-      font-size: 2.5rem;
-      border: 1px solid black; }
+      font-size: 2.5rem; }
     /* line 73, ../../sass/position/_service.scss */
     #service section p {
-      font-size: 1.5rem;
-      border: 1px solid black; }
+      font-size: 1.5rem; }
 
 /* line 1, ../../sass/position/_deroulement.scss */
 #deroulement {
@@ -552,7 +542,6 @@ header {
   grid-template-rows: min-content min-content;
   row-gap: 5vh;
   padding: 2vh 2vw;
-  border: 1px solid black;
     /*section {
         display: flex;
         flex-flow: column nowrap;
@@ -600,15 +589,13 @@ header {
     grid-column: 1 / -1;
     grid-row: 1 / span 1;
     text-align: center;
-    font-size: 3rem;
-    border: 1px solid black; }
+    font-size: 3rem; }
   /* line 24, ../../sass/position/_deroulement.scss */
   #deroulement .etape {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: start;
-    border: 1px solid black; }
+    align-items: start; }
     /* line 34, ../../sass/position/_deroulement.scss */
     #deroulement .etape section {
       display: flex;
@@ -619,8 +606,7 @@ header {
       min-width: 200px;
       width: min-content;
       padding: 2vh 2vw;
-      margin: 2vh 2vw;
-      border: 1px solid black; }
+      margin: 2vh 2vw; }
       @media all and (max-width: 440px) {
         /* line 34, ../../sass/position/_deroulement.scss */
         #deroulement .etape section {
@@ -638,12 +624,10 @@ header {
       /* line 66, ../../sass/position/_deroulement.scss */
       #deroulement .etape section h3 {
         text-align: center;
-        font-size: 2.5rem;
-        border: 1px solid black; }
+        font-size: 2.5rem; }
       /* line 75, ../../sass/position/_deroulement.scss */
       #deroulement .etape section p {
-        font-size: 1.5rem;
-        border: 1px solid black; }
+        font-size: 1.5rem; }
 
 /* line 1, ../../sass/position/_competance.scss */
 #competance {
@@ -652,15 +636,13 @@ header {
   grid-template-rows: min-content min-content;
   row-gap: 5vh;
   min-height: 100vh;
-  padding: 2vh 2vw;
-  border: 1px solid black; }
+  padding: 2vh 2vw; }
   /* line 13, ../../sass/position/_competance.scss */
   #competance h2 {
     grid-column: 1 / -1;
     grid-row: 1 / span 1;
     text-align: center;
-    font-size: 3rem;
-    border: 1px solid black; }
+    font-size: 3rem; }
   /* line 24, ../../sass/position/_competance.scss */
   #competance .categorie {
     grid-column: 1 / -1;
@@ -668,14 +650,12 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: start;
-    border: 1px solid black; }
+    align-items: start; }
     /* line 37, ../../sass/position/_competance.scss */
     #competance .categorie section {
       width: 30%;
       padding: 2vh 2vw;
-      margin-bottom: 5vh;
-      border: 1px solid black; }
+      margin-bottom: 5vh; }
       @media all and (max-width: 690px) {
         /* line 37, ../../sass/position/_competance.scss */
         #competance .categorie section {
@@ -695,37 +675,30 @@ header {
       #competance .categorie section h3 {
         font-size: 2.25rem;
         text-align: center;
-        margin-bottom: 2.25vh;
-        border: 1px solid black; }
-      /* line 72, ../../sass/position/_competance.scss */
-      #competance .categorie section ul {
-        border: 1px solid black; }
-        /* line 77, ../../sass/position/_competance.scss */
-        #competance .categorie section ul li {
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: space-around;
-          align-items: center;
-          margin-bottom: 2.5vh;
-          border: 1px solid black; }
-          /* line 88, ../../sass/position/_competance.scss */
-          #competance .categorie section ul li:last-child {
-            margin-bottom: 0; }
-          /* line 92, ../../sass/position/_competance.scss */
-          #competance .categorie section ul li h4 {
-            font-size: 2.25rem;
-            text-align: center;
-            margin-bottom: 2vw;
-            border: 1px solid black; }
-            /* line 102, ../../sass/position/_competance.scss */
-            #competance .categorie section ul li h4 img {
-              height: auto;
-              width: 8.5vw;
-              max-width: 100px; }
-          /* line 109, ../../sass/position/_competance.scss */
-          #competance .categorie section ul li p {
-            font-size: 1.5rem;
-            border: 1px solid black; }
+        margin-bottom: 2.25vh; }
+      /* line 77, ../../sass/position/_competance.scss */
+      #competance .categorie section ul li {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 2.5vh; }
+        /* line 88, ../../sass/position/_competance.scss */
+        #competance .categorie section ul li:last-child {
+          margin-bottom: 0; }
+        /* line 92, ../../sass/position/_competance.scss */
+        #competance .categorie section ul li h4 {
+          font-size: 2.25rem;
+          text-align: center;
+          margin-bottom: 2vw; }
+          /* line 102, ../../sass/position/_competance.scss */
+          #competance .categorie section ul li h4 img {
+            height: auto;
+            width: 8.5vw;
+            max-width: 100px; }
+        /* line 109, ../../sass/position/_competance.scss */
+        #competance .categorie section ul li p {
+          font-size: 1.5rem; }
 
 /* line 1, ../../sass/position/_portfolio.scss */
 #portfolio {
@@ -734,16 +707,13 @@ header {
   grid-template-rows: min-content 1fr;
   row-gap: 5vh;
   min-height: 100vh;
-  padding: 2vh 2vw;
-  border: 1px solid black; }
+  padding: 2vh 2vw; }
   /* line 13, ../../sass/position/_portfolio.scss */
   #portfolio h2 {
     text-align: center;
-    font-size: 3rem;
-    border: 1px solid black; }
+    font-size: 3rem; }
   /* line 22, ../../sass/position/_portfolio.scss */
   #portfolio .sites {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 25vh;
@@ -765,7 +735,6 @@ header {
         grid-template-columns: 1fr; } }
     /* line 53, ../../sass/position/_portfolio.scss */
     #portfolio .sites section {
-      border: 1px solid black;
       position: relative;
       background-position: center;
       background-size: cover;
@@ -773,17 +742,14 @@ header {
       cursor: pointer; }
       /* line 64, ../../sass/position/_portfolio.scss */
       #portfolio .sites section:hover > h3 {
-        border: 1px solid black;
         padding: 1vh 2vw;
         font-size: 2rem; }
       /* line 73, ../../sass/position/_portfolio.scss */
       #portfolio .sites section:hover > span {
-        border: 1px solid black;
         padding: 0.5vh 2vw;
         font-size: 1.5rem; }
       /* line 82, ../../sass/position/_portfolio.scss */
       #portfolio .sites section h3 {
-        background: white;
         position: absolute;
         top: 0;
         left: 0;
@@ -794,7 +760,6 @@ header {
         font-size: 0rem; }
       /* line 97, ../../sass/position/_portfolio.scss */
       #portfolio .sites section span {
-        background: white;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -814,16 +779,13 @@ header {
   grid-template-rows: min-content 1fr;
   row-gap: 5vh;
   min-height: 100vh;
-  padding: 2vh 2vw;
-  border: 1px solid black; }
+  padding: 2vh 2vw; }
   /* line 13, ../../sass/position/_description.scss */
   #description h2 {
     text-align: center;
-    font-size: 3rem;
-    border: 1px solid black; }
+    font-size: 3rem; }
   /* line 22, ../../sass/position/_description.scss */
   #description p {
-    border: 1px solid black;
     align-self: center;
     text-align: center;
     font-size: 2.25rem; }
@@ -836,8 +798,7 @@ header {
   column-gap: 5vw;
   row-gap: 5vh;
   min-height: 100vh;
-  padding: 2vh 2vw;
-  border: 1px solid black; }
+  padding: 2vh 2vw; }
   @media all and (max-width: 770px) {
     /* line 15, ../../sass/position/_contact.scss */
     #contact {
@@ -853,22 +814,17 @@ header {
   #contact h2 {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 3rem;
-    border: 1px solid black; }
+    font-size: 3rem; }
   /* line 39, ../../sass/position/_contact.scss */
   #contact menu {
     display: none;
     flex-flow: row nowrap;
-    justify-content: center;
-    border: 1px solid black; }
+    justify-content: center; }
     /* line 48, ../../sass/position/_contact.scss */
     #contact menu button {
       margin: 0 2vw;
       padding: 1vh 2vw;
       font-size: 1.5rem; }
-  /* line 55, ../../sass/position/_contact.scss */
-  #contact section {
-    border: 1px solid black; }
   /* line 62, ../../sass/position/_contact.scss */
   #contact .contact h3 {
     display: none; }
@@ -878,23 +834,19 @@ header {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: stretch;
-    height: 100%;
-    border: 1px solid black; }
+    height: 100%; }
     /* line 77, ../../sass/position/_contact.scss */
     #contact .contact ul li {
       margin: 2vh 2vw;
-      padding: 2vh 2vw;
-      border: 1px solid black; }
+      padding: 2vh 2vw; }
       /* line 85, ../../sass/position/_contact.scss */
       #contact .contact ul li h4 {
         text-align: center;
         font-size: 2rem;
-        margin-bottom: 2vh;
-        border: 1px solid black; }
+        margin-bottom: 2vh; }
       /* line 95, ../../sass/position/_contact.scss */
       #contact .contact ul li p {
-        font-size: 1.5rem;
-        border: 1px solid black; }
+        font-size: 1.5rem; }
   /* line 106, ../../sass/position/_contact.scss */
   #contact .formulaire {
     padding: 2vh 2vw; }
@@ -908,8 +860,7 @@ header {
       grid-template-rows: repeat(2, min-content) 40% min-content 1fr;
       column-gap: 2vw;
       row-gap: 3vh;
-      height: 100%;
-      border: 1px solid black; }
+      height: 100%; }
       /* line 125, ../../sass/position/_contact.scss */
       #contact .formulaire form input {
         justify-self: stretch;
@@ -954,8 +905,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  border: 1px solid black; }
+  height: 10vh; }
   /* line 11, ../../sass/position/_footer.scss */
   footer p {
     font-size: 1.5rem; }
@@ -978,9 +928,7 @@ footer {
   padding: 1vh 1vw;
   z-index: 1;
   overflow-x: hidden;
-  overflow-y: auto;
-  border: 1px solid black;
-  background: white; }
+  overflow-y: auto; }
   @media all and (max-width: 770px) {
     /* line 22, ../../sass/position/_siteInfo.scss */
     #siteInfo {
@@ -1003,9 +951,7 @@ footer {
     grid-row: 1 / span 1;
     padding: 1vh 2vh;
     text-align: center;
-    font-size: 3rem;
-    border: 1px solid black;
-    background: white; }
+    font-size: 3rem; }
   /* line 54, ../../sass/position/_siteInfo.scss */
   #siteInfo #fermer {
     grid-column: 1 / span 1;
@@ -1020,17 +966,14 @@ footer {
   /* line 67, ../../sass/position/_siteInfo.scss */
   #siteInfo .description {
     grid-column: 1 / -1;
-    grid-row: 3 / span 1;
-    border: 1px solid black; }
+    grid-row: 3 / span 1; }
     /* line 75, ../../sass/position/_siteInfo.scss */
     #siteInfo .description h3 {
       margin-bottom: 2vh;
-      font-size: 2rem;
-      border: 1px solid black; }
+      font-size: 2rem; }
     /* line 84, ../../sass/position/_siteInfo.scss */
     #siteInfo .description p {
-      font-size: 1.5rem;
-      border: 1px solid black; }
+      font-size: 1.5rem; }
   /* line 93, ../../sass/position/_siteInfo.scss */
   #siteInfo #tagSite {
     display: flex;
@@ -1038,18 +981,36 @@ footer {
     justify-content: space-around;
     align-items: center;
     grid-column: 1 / -1;
-    grid-row: 4 / span 1;
-    border: 1px solid black; }
+    grid-row: 4 / span 1; }
     /* line 105, ../../sass/position/_siteInfo.scss */
     #siteInfo #tagSite li {
       margin: 0.5vh 1vw;
-      font-size: 1.5rem;
-      border: 1px solid black; }
+      font-size: 1.5rem; }
   /* line 115, ../../sass/position/_siteInfo.scss */
   #siteInfo #linkSite {
     grid-column: 1 / -1;
     grid-row: 5 / span 1;
     justify-self: center;
     padding: 2vh 2vw;
-    font-size: 2rem;
-    border: 1px solid black; }
+    font-size: 2rem; }
+
+/* line 7, ../../sass/_color.scss */
+html {
+  background: #C8CED4;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+/* line 1, ../../sass/color/_header.scss */
+header {
+  background: url("../src/img/header_background.jpg") center no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
+  box-shadow: 0 0 14px 3px #4D4F52; }
+  @media all and (max-width: 704px) {
+    /* line 1, ../../sass/color/_header.scss */
+    header {
+      border-bottom-left-radius: 50% 20%;
+      border-bottom-right-radius: 50% 20%; } }
+  /* line 13, ../../sass/color/_header.scss */
+  header h1 {
+    font-family: 'Lobster', cursive; }

@@ -1,0 +1,16 @@
+header {
+    background: url("../src/img/header_background.jpg") center no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+    box-shadow: 0 0 14px 3px $noir;
+
+    @media all and (max-width: 704px) {
+        border-bottom-left-radius: 50% 20%;
+        border-bottom-right-radius: 50% 20%;
+    }
+
+    h1 {
+        font-family: 'Lobster', cursive;
+    }
+}
