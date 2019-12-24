@@ -5,7 +5,7 @@ header {
     border-bottom-right-radius: 50% 10%;
     box-shadow: 0 0 14px 3px $noir;
 
-    @media all and (max-width: 704px) {
+    @media all and (max-width: 750px) {
         border-bottom-left-radius: 50% 20%;
         border-bottom-right-radius: 50% 20%;
     }

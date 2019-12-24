@@ -1,0 +1,36 @@
+nav {
+    background-color: $noir;
+    box-shadow: 0 0 15px 1px #000;
+
+    #menuburger {
+        background: none;
+        border: none;
+        color: #000;
+        transition: .5s;
+
+        &:hover {
+            color: $blanc;
+        }
+    }
+
+    li a {
+        color: #000;
+        font-weight: bold;
+        text-transform: capitalize;
+        text-decoration: none;
+        letter-spacing: .1pc;
+        transition: .5s;
+
+        &:hover {
+            color: $blanc;
+        }
+    }
+
+    @media all and (max-width: 750px) {
+        ul {
+            background: darken($noir, 5);
+            box-shadow: inset 0 5px 5px -5px #000;
+        }
+    }
+}
+

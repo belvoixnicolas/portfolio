@@ -402,11 +402,11 @@ nav {
       font-size: 1.75rem; }
       /* line 39, ../../sass/position/_nav.scss */
       nav ul li a {
-        padding: 1vh 2vw; }
+        padding: 1vh 1vw; }
   /* line 49, ../../sass/position/_nav.scss */
   nav #menuburger {
     display: none; }
-  @media all and (max-width: 704px) {
+  @media all and (max-width: 750px) {
     /* line 54, ../../sass/position/_nav.scss */
     nav {
       display: grid;
@@ -452,7 +452,7 @@ nav {
             padding: 0;
             width: 100%;
             padding: 1.5vh 1vw; } }
-  @media all and (max-width: 245px) {
+  @media all and (max-width: 280px) {
     /* line 109, ../../sass/position/_nav.scss */
     nav ul {
       grid-template-columns: 100%;
@@ -473,10 +473,15 @@ header {
   header .logo {
     height: 40vh;
     width: auto; }
-  /* line 22, ../../sass/position/_header.scss */
+    @media all and (max-width: 400px) {
+      /* line 17, ../../sass/position/_header.scss */
+      header .logo {
+        height: auto;
+        width: 90vw; } }
+  /* line 27, ../../sass/position/_header.scss */
   header h1 {
     font-size: 3rem; }
-  /* line 26, ../../sass/position/_header.scss */
+  /* line 31, ../../sass/position/_header.scss */
   header .scrool {
     height: 10vh;
     width: auto; }
@@ -1008,6 +1013,36 @@ html {
   background: #C8CED4;
   font-family: 'Source Sans Pro', sans-serif; }
 
+/* line 1, ../../sass/color/_nav.scss */
+nav {
+  background-color: #4D4F52;
+  box-shadow: 0 0 15px 1px #000; }
+  /* line 5, ../../sass/color/_nav.scss */
+  nav #menuburger {
+    background: none;
+    border: none;
+    color: #000;
+    transition: .5s; }
+    /* line 11, ../../sass/color/_nav.scss */
+    nav #menuburger:hover {
+      color: #C8CED4; }
+  /* line 16, ../../sass/color/_nav.scss */
+  nav li a {
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: .1pc;
+    transition: .5s; }
+    /* line 24, ../../sass/color/_nav.scss */
+    nav li a:hover {
+      color: #C8CED4; }
+  @media all and (max-width: 750px) {
+    /* line 30, ../../sass/color/_nav.scss */
+    nav ul {
+      background: #414245;
+      box-shadow: inset 0 5px 5px -5px #000; } }
+
 /* line 1, ../../sass/color/_header.scss */
 header {
   background: url("../src/img/header_background.jpg") center no-repeat;
@@ -1015,7 +1050,7 @@ header {
   border-bottom-left-radius: 50% 10%;
   border-bottom-right-radius: 50% 10%;
   box-shadow: 0 0 14px 3px #4D4F52; }
-  @media all and (max-width: 704px) {
+  @media all and (max-width: 750px) {
     /* line 1, ../../sass/color/_header.scss */
     header {
       border-bottom-left-radius: 50% 20%;
