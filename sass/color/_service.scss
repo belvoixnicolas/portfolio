@@ -1,4 +1,9 @@
 #service {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+
+    background: $blanc;
+
     h2 {
         @extend %titre;
     }

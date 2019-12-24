@@ -16,4 +16,15 @@
         <h3>Titre service</h3>
         <p>Nulla distinctio ipsum modi asperiores, facere soluta laudantium voluptates harum accusamus tenetur dicta tempora quaerat quis nesciunt reprehenderit deleniti? Consequatur, at ipsum. Officia, libero soluta consequatur dolorem expedita ipsum, totam reprehenderit explicabo obcaecati quisquam aliquam veritatis aliquid vero. Asperiores dolores consequuntur ipsum nihil est atque, et cupiditate error. Tempora, dolorem!</p>
     </section>
+
+    <svg height="0" width="0">
+        <defs>
+            <clipPath id="cross">
+            <rect y="110" x="137" width="90" height="90"/>
+            <rect x="0" y="110" width="90" height="90"/>
+            <rect x="137" y="0" width="90" height="90"/>
+            <rect x="0" y="0" width="90" height="90"/>
+            </clipPath>
+        </defs>
+    </svg>
 </article>
