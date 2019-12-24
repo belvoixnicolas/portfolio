@@ -3,6 +3,7 @@
 
 /// base ///
     @import url('https://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro:300,400&display=swap');
+    @import "_modelColor";
 
     html {
         background: $blanc;
@@ -11,3 +12,6 @@
 
 /// header ///
     @import "color/_header";
+
+/// service ///
+    @import "color/_service";

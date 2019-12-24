@@ -1,0 +1,17 @@
+#service {
+    h2 {
+        @extend %titre;
+    }
+
+    section {
+        h3 {
+            @extend %textNoir;
+        }
+
+        p {
+            @extend %textNoir;
+            
+            font-weight: lighter;
+        }
+    }
+}

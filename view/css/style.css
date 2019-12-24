@@ -533,6 +533,7 @@ header {
       font-size: 2.5rem; }
     /* line 73, ../../sass/position/_service.scss */
     #service section p {
+      text-align: center;
       font-size: 1.5rem; }
 
 /* line 1, ../../sass/position/_deroulement.scss */
@@ -994,7 +995,15 @@ footer {
     padding: 2vh 2vw;
     font-size: 2rem; }
 
-/* line 7, ../../sass/_color.scss */
+/* line 1, ../../sass/_modelColor.scss */
+header h1, #service h2 {
+  font-family: 'Lobster', cursive; }
+
+/* line 5, ../../sass/_modelColor.scss */
+#service section h3, #service section p {
+  color: #4D4F52; }
+
+/* line 8, ../../sass/_color.scss */
 html {
   background: #C8CED4;
   font-family: 'Source Sans Pro', sans-serif; }
@@ -1011,6 +1020,7 @@ header {
     header {
       border-bottom-left-radius: 50% 20%;
       border-bottom-right-radius: 50% 20%; } }
-  /* line 13, ../../sass/color/_header.scss */
-  header h1 {
-    font-family: 'Lobster', cursive; }
+
+/* line 11, ../../sass/color/_service.scss */
+#service section p {
+  font-weight: lighter; }
