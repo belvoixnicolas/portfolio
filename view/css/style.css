@@ -1112,7 +1112,10 @@ header {
 #service {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
-  background: #C8CED4; }
-  /* line 16, ../../sass/color/_service.scss */
+  background: #4D4F52; }
+  /* line 7, ../../sass/color/_service.scss */
+  #service svg {
+    display: none; }
+  /* line 20, ../../sass/color/_service.scss */
   #service section p {
     font-weight: lighter; }
