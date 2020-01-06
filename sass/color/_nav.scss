@@ -1,6 +1,11 @@
 nav {
     background-color: $noir;
     box-shadow: 0 0 15px 1px #000;
+    transition: opacity .5s;
+
+    &[class=hidden] {
+        opacity: 0;
+    }
 
     #menuburger {
         background: none;

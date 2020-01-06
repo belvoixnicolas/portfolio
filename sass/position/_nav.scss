@@ -85,9 +85,15 @@ nav {
                 display: grid;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: repeat(3, min-content);
+                align-content: center;
+
+                height: 20vh;
+                overflow: hidden;
+
+                transition: height .5s;
 
                 &[class='hidden'] {
-                    display: none;
+                    height: 0px;
                 }
 
                 li {
@@ -109,6 +115,8 @@ nav {
         ul {
             grid-template-columns: 100%;
             grid-template-rows: repeat(6, min-content);
+
+            height: 39vh;
         }
     }
 }

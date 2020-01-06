@@ -1,4 +1,4 @@
-<nav>
+<nav id="nav" class="hidden">
     <img src="view/src/logo/logo.svg" alt="Logo site web">
 
     <ul class="hidden">
@@ -27,3 +27,4 @@
     </button>
 </nav>
 <script src="view\js\nav_menuburger.js"></script>
+<script src="view\js\nav_hidden.js"></script>
