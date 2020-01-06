@@ -3,8 +3,10 @@ header {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     min-height: 100vh;
     padding: 2vh 2vw;
+    z-index: 1;
 
     @if $border == 1 {
         border: 1px solid black;

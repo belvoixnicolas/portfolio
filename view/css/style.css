@@ -389,7 +389,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   padding: 2vh 2vw;
-  z-index: 1; }
+  z-index: 10; }
   /* line 17, ../../sass/position/_nav.scss */
   nav img {
     height: auto;
@@ -472,24 +472,26 @@ header {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   min-height: 100vh;
-  padding: 2vh 2vw; }
-  /* line 13, ../../sass/position/_header.scss */
+  padding: 2vh 2vw;
+  z-index: 1; }
+  /* line 15, ../../sass/position/_header.scss */
   header > * {
     margin: 1vh 0; }
-  /* line 17, ../../sass/position/_header.scss */
+  /* line 19, ../../sass/position/_header.scss */
   header .logo {
     height: 40vh;
     width: auto; }
     @media all and (max-width: 400px) {
-      /* line 17, ../../sass/position/_header.scss */
+      /* line 19, ../../sass/position/_header.scss */
       header .logo {
         height: auto;
         width: 90vw; } }
-  /* line 27, ../../sass/position/_header.scss */
+  /* line 29, ../../sass/position/_header.scss */
   header h1 {
     font-size: 3rem; }
-  /* line 31, ../../sass/position/_header.scss */
+  /* line 33, ../../sass/position/_header.scss */
   header .scrool {
     height: 10vh;
     width: auto; }
@@ -1062,12 +1064,50 @@ header {
   border-bottom-left-radius: 50% 10%;
   border-bottom-right-radius: 50% 10%;
   box-shadow: 0 0 14px 3px #4D4F52; }
+  /* line 8, ../../sass/color/_header.scss */
+  header[class=anim] {
+    animation: 4s ease 0s infinite alternate radiusAnim; }
   @media all and (max-width: 750px) {
     /* line 1, ../../sass/color/_header.scss */
     header {
       border-bottom-left-radius: 50% 20%;
-      border-bottom-right-radius: 50% 20%; } }
+      border-bottom-right-radius: 50% 20%; }
+      /* line 16, ../../sass/color/_header.scss */
+      header[class=anim] {
+        animation: 4s ease 0s infinite alternate radiusAnimTel; } }
 
+@keyframes radiusAnimTel {
+  from {
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%; }
+  25% {
+    border-bottom-left-radius: 50% 0%;
+    border-bottom-right-radius: 50% 0%; }
+  50% {
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%; }
+  75% {
+    border-bottom-left-radius: 50% 0%;
+    border-bottom-right-radius: 50% 0%; }
+  to {
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%; } }
+@keyframes radiusAnim {
+  from {
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%; }
+  25% {
+    border-bottom-left-radius: 50% 0%;
+    border-bottom-right-radius: 50% 0%; }
+  50% {
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%; }
+  75% {
+    border-bottom-left-radius: 50% 0%;
+    border-bottom-right-radius: 50% 0%; }
+  to {
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%; } }
 /* line 1, ../../sass/color/_service.scss */
 #service {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);

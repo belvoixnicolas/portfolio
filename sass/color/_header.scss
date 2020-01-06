@@ -5,12 +5,74 @@ header {
     border-bottom-right-radius: 50% 10%;
     box-shadow: 0 0 14px 3px $noir;
 
+    &[class=anim] {
+        animation: 4s ease 0s infinite alternate radiusAnim;
+    }
+
     @media all and (max-width: 750px) {
         border-bottom-left-radius: 50% 20%;
         border-bottom-right-radius: 50% 20%;
+
+        &[class=anim] {
+            animation: 4s ease 0s infinite alternate radiusAnimTel;
+        }
     }
 
     h1 {
         @extend %titre;
+    }
+}
+
+@keyframes radiusAnimTel {
+    from {
+        border-bottom-left-radius: 50% 20%;
+        border-bottom-right-radius: 50% 20%;
+    }
+
+    25% {
+        border-bottom-left-radius: 50% 0%;
+        border-bottom-right-radius: 50% 0%;
+    }
+
+    50% {
+        border-bottom-left-radius: 50% 20%;
+        border-bottom-right-radius: 50% 20%;
+    }
+
+    75% {
+        border-bottom-left-radius: 50% 0%;
+        border-bottom-right-radius: 50% 0%;
+    }
+
+    to {
+        border-bottom-left-radius: 50% 20%;
+        border-bottom-right-radius: 50% 20%;
+    }
+}
+
+@keyframes radiusAnim {
+    from {
+        border-bottom-left-radius: 50% 10%;
+        border-bottom-right-radius: 50% 10%;
+    }
+
+    25% {
+        border-bottom-left-radius: 50% 0%;
+        border-bottom-right-radius: 50% 0%;
+    }
+
+    50% {
+        border-bottom-left-radius: 50% 10%;
+        border-bottom-right-radius: 50% 10%;
+    }
+
+    75% {
+        border-bottom-left-radius: 50% 0%;
+        border-bottom-right-radius: 50% 0%;
+    }
+
+    to {
+        border-bottom-left-radius: 50% 10%;
+        border-bottom-right-radius: 50% 10%;
     }
 }
