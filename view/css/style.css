@@ -547,36 +547,26 @@ header {
       padding: 2vh 2vw;
       overflow: hidden;
       border: 1px solid black; }
-      @media all and (min-width: 704px) {
-        /* line 61, ../../sass/position/_service.scss */
-        #service .main section:hover > p {
-          height: 100%; } }
-      /* line 66, ../../sass/position/_service.scss */
+      /* line 60, ../../sass/position/_service.scss */
       #service .main section > * {
         margin-bottom: 5vh; }
-        /* line 69, ../../sass/position/_service.scss */
+        /* line 63, ../../sass/position/_service.scss */
         #service .main section > *:last-child {
           margin-bottom: 0; }
-      /* line 74, ../../sass/position/_service.scss */
+      /* line 68, ../../sass/position/_service.scss */
       #service .main section img {
         height: 15vh;
         width: auto; }
-      /* line 79, ../../sass/position/_service.scss */
+      /* line 73, ../../sass/position/_service.scss */
       #service .main section h3 {
         text-align: center;
         font-size: 2.5rem;
         border: 1px solid black; }
-      /* line 88, ../../sass/position/_service.scss */
+      /* line 82, ../../sass/position/_service.scss */
       #service .main section p {
         text-align: center;
         font-size: 1.5rem;
         border: 1px solid black; }
-        @media all and (min-width: 704px) {
-          /* line 88, ../../sass/position/_service.scss */
-          #service .main section p {
-            height: 0%;
-            overflow: hidden;
-            transition: height .5s; } }
 
 /* line 1, ../../sass/position/_deroulement.scss */
 #deroulement {
@@ -1200,26 +1190,38 @@ header {
 #service::before {
   display: block;
   content: "";
-  -webkit-clip-path: url("../src/forme/forme_service.svg#haut");
-  clip-path: url("../src/forme/forme_service.svg#haut");
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
   height: 5vh;
   width: 100%;
   margin-bottom: -1px;
   background: #4D4F52; }
-/* line 13, ../../sass/color/_service.scss */
+/* line 12, ../../sass/color/_service.scss */
 #service::after {
   display: block;
   content: "";
-  -webkit-clip-path: url("../src/forme/forme_service.svg#bas");
-  clip-path: url("../src/forme/forme_service.svg#bas");
+  clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
   height: 5vh;
   width: 100%;
   margin-top: -1px;
   background: #4D4F52; }
-/* line 24, ../../sass/color/_service.scss */
+@media all and (min-width: 704px) {
+  /* line 23, ../../sass/color/_service.scss */
+  #service:hover > .main section p {
+    height: 50vh;
+    overflow-y: auto;
+    mask-image: linear-gradient(to bottom, black 70%, black 100%); }
+  /* line 30, ../../sass/color/_service.scss */
+  #service .main section p {
+    height: 25vh;
+    overflow: hidden;
+    transition: .5s;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat; } }
+/* line 41, ../../sass/color/_service.scss */
 #service .main {
   background: #4D4F52; }
-/* line 37, ../../sass/color/_service.scss */
+/* line 54, ../../sass/color/_service.scss */
 #service section p {
   font-weight: bold;
   letter-spacing: .1pc; }
@@ -1239,32 +1241,31 @@ header {
   background-size: cover; }
   /* line 16, ../../sass/color/_deroulement.scss */
   #deroulement::before {
-    -webkit-clip-path: url("../src/forme/forme_deroulement.svg#haut");
-    clip-path: url("../src/forme/forme_deroulement.svg#haut");
+    clip-path: polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 90% 100%, 95% 0%, 100% 100%);
     top: -5vh;
     box-shadow: inset 0 30px 12px -12px rgba(0, 0, 0, 0.25); }
   /* line 26, ../../sass/color/_deroulement.scss */
   #deroulement::after {
-    -webkit-clip-path: url("../src/forme/forme_deroulement.svg#bas");
-    clip-path: url("../src/forme/forme_deroulement.svg#bas");
+    clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);
     bottom: -5vh;
     box-shadow: inset 0 -30px 12px -12px rgba(0, 0, 0, 0.25); }
-  /* line 36, ../../sass/color/_deroulement.scss */
+  /* line 35, ../../sass/color/_deroulement.scss */
   #deroulement h2 {
     color: #000; }
   @media all and (min-width: 704px) {
-    /* line 43, ../../sass/color/_deroulement.scss */
+    /* line 42, ../../sass/color/_deroulement.scss */
     #deroulement:hover > .etape section p {
       height: 50vh;
-      overflow: hidden;
       overflow-y: auto;
-      mask: inherit; }
-    /* line 50, ../../sass/color/_deroulement.scss */
+      mask-image: linear-gradient(to bottom, black 70%, black 100%); }
+    /* line 48, ../../sass/color/_deroulement.scss */
     #deroulement .etape section p {
       height: 25vh;
       overflow: hidden;
       transition: .5s;
-      mask: url("../src/forme/forme_deroulement.svg#blur"); } }
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      mask-size: 100% 100%;
+      mask-repeat: no-repeat; } }
   /* line 61, ../../sass/color/_deroulement.scss */
   #deroulement .etape section h3 {
     font-weight: lighter; }

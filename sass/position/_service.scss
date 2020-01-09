@@ -56,12 +56,6 @@
             @if $border == 1 {
                 border: 1px solid black;
             }
-
-            @media all and (min-width: 704px) {
-                &:hover > p {
-                    height: 100%;
-                }
-            }
     
             & > * {
                 margin-bottom: 5vh;
@@ -88,12 +82,6 @@
             p {
                 text-align: center;
                 font-size: 1.5rem;
-
-                @media all and (min-width: 704px) {
-                    height: 0%;
-                    overflow: hidden;
-                    transition: height .5s;
-                }
     
                 @if $border == 1 {
                     border: 1px solid black;

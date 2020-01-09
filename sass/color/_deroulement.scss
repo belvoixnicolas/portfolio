@@ -16,8 +16,8 @@ $hauteur: 5vh;
     &::before {
         @extend %bordureDeroulement;
 
-        -webkit-clip-path: url("../src/forme/forme_deroulement.svg#haut");
-        clip-path: url("../src/forme/forme_deroulement.svg#haut");
+        
+        clip-path: polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 90% 100%, 95% 0%, 100% 100%);
         top: -($hauteur);
 
         box-shadow: inset 0 30px 12px -12px rgba(#000, .25);
@@ -26,8 +26,7 @@ $hauteur: 5vh;
     &::after {
         @extend %bordureDeroulement;
 
-        -webkit-clip-path: url("../src/forme/forme_deroulement.svg#bas");
-        clip-path: url("../src/forme/forme_deroulement.svg#bas");
+        clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);
         bottom: -($hauteur);
 
         box-shadow: inset 0 -30px 12px -12px rgba(#000, .25);
@@ -42,9 +41,8 @@ $hauteur: 5vh;
     @media all and (min-width: 704px) {
         &:hover > .etape section p {
             height: 50vh;
-            overflow: hidden;
             overflow-y: auto;
-            mask: inherit;
+            mask-image: linear-gradient(to bottom, black 70%, black 100%);
         }
 
         .etape section p {
@@ -52,7 +50,9 @@ $hauteur: 5vh;
             overflow: hidden;
             transition: .5s;
 
-            mask: url("../src/forme/forme_deroulement.svg#blur");
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
         }
     }
 

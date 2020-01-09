@@ -2,8 +2,7 @@
     &::before {
         display: block;
         content: "";
-        -webkit-clip-path: url("../src/forme/forme_service.svg#haut");
-        clip-path: url("../src/forme/forme_service.svg#haut");
+        clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
         height: 5vh;
         width: 100%;
         margin-bottom: -1px;
@@ -13,12 +12,30 @@
     &::after {
         display: block;
         content: "";
-        -webkit-clip-path: url("../src/forme/forme_service.svg#bas");
-        clip-path: url("../src/forme/forme_service.svg#bas");
+        clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
         height: 5vh;
         width: 100%;
         margin-top: -1px;
         background: $noir;
+    }
+
+    @media all and (min-width: 704px) {
+        &:hover > .main section p {
+            height: 50vh;
+            
+            overflow-y: auto;
+            mask-image: linear-gradient(to bottom, black 70%, black 100%);
+        }
+
+        .main section p {
+            height: 25vh;
+            overflow: hidden;
+            transition: .5s;
+
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
+        }
     }
 
     .main {
