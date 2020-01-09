@@ -2,6 +2,17 @@
     font-family: 'Lobster', cursive;
 }
 
+%titreClaire {
+    @extend %titre;
+    @extend %textClaire;
+    
+    text-shadow: 2px 2px 2px #000;
+}
+
 %textNoir {
     color: $noir;
+}
+
+%textClaire {
+    color: $blanc;
 }

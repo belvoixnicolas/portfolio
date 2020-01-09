@@ -1,26 +1,44 @@
 #service {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+    &::before {
+        display: block;
+        content: "";
+        -webkit-clip-path: url("../src/forme/forme_service.svg#haut");
+        clip-path: url("../src/forme/forme_service.svg#haut");
+        height: 5vh;
+        width: 100%;
+        margin-bottom: -1px;
+        background: $noir;
+    }
 
-    background: $noir;
+    &::after {
+        display: block;
+        content: "";
+        -webkit-clip-path: url("../src/forme/forme_service.svg#bas");
+        clip-path: url("../src/forme/forme_service.svg#bas");
+        height: 5vh;
+        width: 100%;
+        margin-top: -1px;
+        background: $noir;
+    }
 
-    svg {
-        display: none;
+    .main {
+        background: $noir;
     }
 
     h2 {
-        @extend %titre;
+        @extend %titreClaire;
     }
 
     section {
         h3 {
-            @extend %textNoir;
+            @extend %titreClaire;
         }
 
         p {
-            @extend %textNoir;
-            
-            font-weight: lighter;
+            @extend %textClaire;
+
+            font-weight: bold;
+            letter-spacing: .1pc;
         }
     }
 }
