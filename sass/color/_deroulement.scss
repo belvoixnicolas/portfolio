@@ -1,0 +1,73 @@
+$hauteur: 5vh;
+
+%bordureDeroulement {
+    content: "";
+    height: $hauteur;
+    width: 100%;
+    display: block;
+    background: inherit;
+    position: absolute;
+}
+
+#deroulement {
+    background: url("../src/img/background_deroulement.jpg") center fixed no-repeat;
+    background-size: cover;
+
+    &::before {
+        @extend %bordureDeroulement;
+
+        -webkit-clip-path: url("../src/forme/forme_deroulement.svg#haut");
+        clip-path: url("../src/forme/forme_deroulement.svg#haut");
+        top: -($hauteur);
+
+        box-shadow: inset 0 30px 12px -12px rgba(#000, .25);
+    }
+
+    &::after {
+        @extend %bordureDeroulement;
+
+        -webkit-clip-path: url("../src/forme/forme_deroulement.svg#bas");
+        clip-path: url("../src/forme/forme_deroulement.svg#bas");
+        bottom: -($hauteur);
+
+        box-shadow: inset 0 -30px 12px -12px rgba(#000, .25);
+    }
+
+    h2 {
+        @extend %titre;
+
+        color: #000;
+    }
+
+    @media all and (min-width: 704px) {
+        &:hover > .etape section p {
+            height: 50vh;
+            overflow: hidden;
+            overflow-y: auto;
+            mask: inherit;
+        }
+
+        .etape section p {
+            height: 25vh;
+            overflow: hidden;
+            transition: .5s;
+
+            mask: url("../src/forme/forme_deroulement.svg#blur");
+        }
+    }
+
+    .etape {
+        section {
+            h3 {
+                @extend %titre;
+
+                font-weight: lighter;
+            }
+
+            p {
+                text-align: center;
+                letter-spacing: .1pc;
+            }
+        }
+    }
+}

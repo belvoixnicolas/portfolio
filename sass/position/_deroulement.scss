@@ -4,7 +4,10 @@
     grid-template-rows: min-content min-content;
     row-gap: 5vh;
     //min-height: 100vh;
-    padding: 2vh 2vw;
+    padding: 0vh 2vw;
+    margin: 10vh 0;
+
+    position: relative;
 
     @if $border == 1 {
         border: 1px solid black;
