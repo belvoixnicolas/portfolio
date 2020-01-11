@@ -5,6 +5,11 @@
     <title>Nicolas Belvoix</title>
 
     <link rel="stylesheet" href="view/css/style.css?v=2">
+    <?php if ($isMobil && $navigateur == "chrome") { ?>
+        <link rel="stylesheet" href="view/css/barreChrome.css?v=2">
+    <?php }elseif ($isMobil && $navigateur == "edge") { ?>
+        <link rel="stylesheet" href="view/css/barreEdge.css?v=2">
+    <?php } ?>
 
     <link rel="apple-touch-icon" sizes="180x180" href="view/src/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="view/src/favicon/favicon-32x32.png">

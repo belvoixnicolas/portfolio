@@ -19,25 +19,6 @@
         background: $noir;
     }
 
-    @media all and (min-width: 704px) {
-        &:hover > .main section p {
-            height: 50vh;
-            
-            overflow-y: auto;
-            mask-image: linear-gradient(to bottom, black 70%, black 100%);
-        }
-
-        .main section p {
-            height: 25vh;
-            overflow: hidden;
-            transition: .5s;
-
-            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-            mask-size: 100% 100%;
-            mask-repeat: no-repeat;
-        }
-    }
-
     .main {
         background: $noir;
     }
@@ -47,6 +28,22 @@
     }
 
     section {
+        @media all and (min-width: 704px) {
+            &:hover > p {
+                overflow-y: auto;
+                mask-image: linear-gradient(to bottom, transparent, 2%, black, 98%, transparent);
+            }
+    
+            p {
+                max-height: 30vh;
+                overflow: hidden;
+    
+                mask-image: linear-gradient(to bottom, black 50%, 98%, transparent);
+                mask-size: 100% 100%;
+                mask-repeat: no-repeat;
+            }
+        }
+        
         h3 {
             @extend %titreClaire;
         }
