@@ -8,7 +8,7 @@ header {
     padding: 2vh 2vw;
     z-index: 1;
 
-    @if $border == 1 {
+    @if $border == true {
         border: 1px solid black;
     }
 
@@ -34,7 +34,7 @@ header {
         height: 10vh;
         width: auto;
 
-        @if $border == 1 {
+        @if $border == true {
             border: 1px solid black;
         } 
     }

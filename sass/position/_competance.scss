@@ -1,118 +1,92 @@
 #competance {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content;
-    row-gap: 5vh;
-    min-height: 100vh;
-    padding: 2vh 2vw;
+    margin: 20vh 0;
 
-    @if $border == 1 {
+    @if $border == true {
         border: 1px solid black;
     }
 
-    h2 {
-        grid-column: 1 / -1;
-        grid-row: 1 / span 1;
-        text-align: center;
-        font-size: 3rem;
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+        row-gap: 5vh;
+        padding: 2vh 2vw;
 
-        @if $border == 1 {
-            border: 1px solid black;
-        }
-    }
-
-    .categorie {
-        grid-column: 1 / -1;
-        grid-row: 2 / span 1;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: start;
-
-
-        @if $border == 1 {
+        @if $border == true {
             border: 1px solid black;
         }
 
-        section {
-            width: 30%;
-            padding: 2vh 2vw;
-            margin-bottom: 5vh;
+        h2 {
+            grid-column: 1 / -1;
+            grid-row: 1 / span 1;
+            text-align: center;
+            font-size: 3rem;
 
-            @if $border == 1 {
+            @if $border == true {
+                border: 1px solid black;
+            }
+        }
+
+        .competances {
+            display: grid;
+            grid-template-columns: repeat(4, 23.5%);
+            grid-auto-rows: min-content;
+            row-gap: 9vh;
+            column-gap: 2%;
+
+            @if $border == true {
                 border: 1px solid black;
             }
 
-            @media all and (max-width: 690px) {
-                width: 48%;
+            @media all and (max-width: 700px) {
+                grid-template-columns: repeat(3, 30.66%);
+                column-gap: 4%;
+            }
 
-                li h4 img {
-                    height: 15vh !important;
-                    max-height: 100px;
-                    width: auto !important;
-                    max-width: 100% !important;
+            @media all and (max-width: 530px) {
+                grid-template-columns: repeat(2, 48%);
+            }
+
+            @media all and (max-width: 365px) {
+                grid-template-columns: 100%;
+
+                img {
+                    width: 30% !important;
+                }
+
+                h3 {
+                    width: 50% !important;
+                    margin: 0 auto;
                 }
             }
 
-            @media all and (max-width: 500px) {
-                width: 70vw;
-                margin: 0 auto;
-            }
+            section {
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 1fr min-content;
+                row-gap: 3vh;
+                align-self: center;
 
-            h3 {
-                font-size: 2.25rem;
-                text-align: center;
-                margin-bottom: 2.25vh;
-
-                @if $border == 1 {
+                @if $border == true {
                     border: 1px solid black;
                 }
-            }
 
-            ul {
-                @if $border == 1 {
-                    border: 1px solid black;
+                img {
+                    justify-self: center;
+                    align-self: center;
+                    height: auto;
+                    width: 50%;
                 }
 
-                li {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: space-around;
-                    align-items: center;
-                    margin-bottom: 2.5vh;
+                h3 {
+                    font-size: 2rem;
+                    text-align: center;
+                    overflow: hidden;
+                    padding: 0.05pc 0;
+                    white-space: nowrap;
 
-                    @if $border == 1 {
+                    @if $border == true {
                         border: 1px solid black;
-                    }
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-
-                    h4 {
-                        font-size: 2.25rem;
-                        text-align: center;
-                        margin-bottom: 2vw;
-
-                        @if $border == 1 {
-                            border: 1px solid black;
-                        }
-    
-
-                        img {
-                            height: auto;
-                            width: 8.5vw;
-                            max-width: 100px;
-                        }
-                    }
-
-                    p {
-                        font-size: 1.5rem;
-
-                        @if $border == 1 {
-                            border: 1px solid black;
-                        }
-    
                     }
                 }
             }

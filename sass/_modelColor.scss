@@ -1,4 +1,4 @@
-%titre {
+%titreNoir {
     @extend %textNoir;
 
     font-family: 'Lobster', cursive;
@@ -6,9 +6,16 @@
 }
 
 %titreClaire {
-    @extend %titre;
+    @extend %titreNoir;
     @extend %textClaire;
     
+    text-shadow: 2px 2px 2px #000;
+}
+
+%titreBleu {
+    @extend %titreNoir;
+    @extend %textBleu;
+
     text-shadow: 2px 2px 2px #000;
 }
 
@@ -18,4 +25,8 @@
 
 %textClaire {
     color: $blanc;
+}
+
+%textBleu {
+    color: scale-color($bleu, $lightness: -60%);
 }

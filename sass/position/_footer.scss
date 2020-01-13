@@ -4,7 +4,7 @@ footer {
     align-items: center;
     height: 10vh;
 
-    @if $border == 1 {
+    @if $border == true {
         border: 1px solid black;
     } 
 

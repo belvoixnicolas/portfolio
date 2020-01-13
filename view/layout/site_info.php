@@ -1,9 +1,11 @@
-<aside id="siteInfo" class="hidden">
+<aside id="siteInfo" class="hidden" hover="false">
     <h2 id="titreSite">Titre du site</h2>
-    
+
     <button id="fermer"><i class="fas fa-times"></i></button>
 
-    <img id="imgSite" src="https://via.placeholder.com/1000x500?text=photo_du_site" alt="Photo du site">
+    <div class="conteneur">
+        <img id="imgSite" src="https://images-na.ssl-images-amazon.com/images/I/41penUeXD3L._SX258_BO1,204,203,200_.jpg" alt="Photo du site">
+    </div>
 
     <div class="description">
         <h3>Description</h3>
@@ -11,12 +13,12 @@
     </div>
 
     <ul id="tagSite">
-        <li>Tag</li>
-        <li>Tag</li>
-        <li>Tag</li>
-        <li>Tag</li>
-        <li>Tag</li>
+        <li>tag</li>
+        <li>tag</li>
+        <li>tag</li>
+        <li>tag</li>
     </ul>
 
     <a id="linkSite" href="?" target="_blank" rel="external">Visiter</a>
 </aside>
+<script src="view/js/siteInfoHover.js"></script>

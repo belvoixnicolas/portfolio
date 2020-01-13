@@ -1,0 +1,63 @@
+#portfolio {
+    h2 {
+        @extend %titreNoir;
+
+        letter-spacing: .1pc;
+    }
+
+    section {
+        background-color: scale-color($noir, $alpha: -20%);
+        transition: .5s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: scale-color($bleu, $alpha: -60%);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        @supports (backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px)) {
+            &::before {
+                background: transparent;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+            }
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &[mobile="false"]:hover > span, &[mobile="false"]:hover > h3 {
+            height: 2.3pc;
+            padding: 1vh 2vw;
+        }
+
+        span, h3 {
+            height: 0px;
+            padding: 0 2vw;
+            background: scale-color($bleu, $alpha: -20%);
+            color: #0009;
+            letter-spacing: .1pc;
+            text-overflow: ellipsis;
+            transition: .5s;
+        }
+
+        h3 {
+            @extend %titreNoir;
+
+            text-shadow: none;
+        }
+
+        span {
+            @extend %textNoir;
+        }
+    }
+}

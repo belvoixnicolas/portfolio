@@ -10,13 +10,13 @@ nav {
     padding: 2vh 2vw;
     z-index: 10;
 
-    @if $border == 1 {
+    @if $border == true {
         border: 1px solid black;
     }
 
     img {
-        height: auto;
-        width: 5vw;
+        height: 8vh;
+        width: auto;
     }
 
     ul {
@@ -25,21 +25,21 @@ nav {
         align-items: center;
         justify-content: center;
 
-        @if $border == 1 {
+        @if $border == true {
             border: 1px solid black;
         }
 
         li {
             font-size: 1.75rem;
 
-            @if $border == 1 {
+            @if $border == true {
                 border: 1px solid black;
             }
 
             a {
                 padding: 1vh 1vw;
     
-                @if $border == 1 {
+                @if $border == true {
                     border: 1px solid black;
                 }
             }
@@ -50,7 +50,7 @@ nav {
         display: none;
     }
 
-    @media all and (max-width: 750px) {
+    @media all and (max-width: 830px) {
         & {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -75,7 +75,7 @@ nav {
                 align-self: center;
                 font-size: 2rem;
                 margin: 2vh 2vw;
-                padding: 2vw 2vw;
+                padding: 2vh 2vw;
             }
 
             ul {
@@ -118,5 +118,13 @@ nav {
 
             height: 39vh;
         }
+    }
+}
+
+main > article {
+    padding-top: calc(10vh + 2vh * 2) !important;
+
+    @media all and (max-width: 830px) {
+        padding-top: calc(2rem + 2vh * 2 + 2vh * 2) !important;
     }
 }

@@ -1,0 +1,50 @@
+%bordurePencher {
+    margin: 5vh 0;
+
+    &::before, &::after {
+        content: "";
+        height: 5vh;
+        width: 100%;
+        background: $noir;
+        position: absolute;
+    }
+
+    &::before {
+        clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+        top: calc(-5vh - -1px);
+    }
+
+    &::after {
+        clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+        bottom: calc(-5vh - -1px);
+    }
+} 
+
+#competance .main {
+    background: $noir;
+    position: relative;
+
+    @extend %bordurePencher;
+
+    h2 {
+        @extend %titreClaire; 
+    }
+
+    section:hover > h3 {
+        overflow: visible;
+        mask-image: none;
+        white-space: normal;
+        hyphens: auto;
+    }
+
+    h3 {
+        @extend %textClaire;
+
+        font-weight: bold;
+        letter-spacing: .1pc;
+        mask-image: linear-gradient(to right, black 90%, 95%, transparent);
+        letter-spacing: .1pc;
+        
+        transition: .5s;
+    }
+}

@@ -1,0 +1,47 @@
+#siteInfo {
+    background: $bleu;
+
+    h2, h3 {
+        @extend %titreBleu;
+
+        letter-spacing: .1pc;
+        hyphens: auto;
+    }
+
+    button {
+        @extend %textBleu;
+
+        border: none;
+        transition: .5s;
+
+        &:hover {
+            text-shadow: 2px 2px 2px $noir;
+        }
+    }
+
+    .conteneur {
+        height: 100%;
+        box-shadow: inset 0 20px 20px -20px #000, inset 0 -20px 20px -20px #000;
+        transition: .5s;
+
+        img {
+            transition: .5s;
+        }
+    }
+
+    &[hover="true"] {
+        .conteneur {
+            height: 82vh;
+            box-shadow: 0 0px 20px 0px #000;
+            background: scale-color($bleu, $lightness: -60%);
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+            transform: translate(-50%, 0%);
+            top: 0px;
+            z-index: 0;
+        }
+    }
+}

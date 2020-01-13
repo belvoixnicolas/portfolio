@@ -8,7 +8,7 @@
 
     position: relative;
 
-    @if $border == 1 {
+    @if $border == true {
         border: 1px solid black;
     }
 
@@ -18,7 +18,7 @@
         text-align: center;
         font-size: 3rem;
 
-        @if $border == 1 {
+        @if $border == true {
             border: 1px solid black;
         }
     }
@@ -31,7 +31,7 @@
         row-gap: 3vh;
         justify-items: stretch;
 
-        @if $border == 1 {
+        @if $border == true {
             border: 1px solid black;
         }
 
@@ -51,7 +51,7 @@
             align-items: center;
             padding: 2vh 2vw;
 
-            @if $border == 1 {
+            @if $border == true {
                 border: 1px solid black;
             }
 
@@ -72,7 +72,7 @@
                 text-align: center;
                 font-size: 2.5rem;
     
-                @if $border == 1 {
+                @if $border == true {
                     border: 1px solid black;
                 }
             }
@@ -80,7 +80,7 @@
             p {
                 font-size: 1.5rem;
     
-                @if $border == 1 {
+                @if $border == true {
                     border: 1px solid black;
                 }
             }
@@ -95,7 +95,7 @@
         align-self: center;
         padding: 2vh 2vw;
 
-        @if $border == 1 {
+        @if $border == true {
             border: 1px solid black;
         }
 
@@ -116,7 +116,7 @@
             text-align: center;
             font-size: 2.5rem;
 
-            @if $border == 1 {
+            @if $border == true {
                 border: 1px solid black;
             }
         }
@@ -124,7 +124,7 @@
         p {
             font-size: 1.5rem;
 
-            @if $border == 1 {
+            @if $border == true {
                 border: 1px solid black;
             }
         }
