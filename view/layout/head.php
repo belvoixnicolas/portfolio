@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nicolas Belvoix</title>
 
-    <link rel="stylesheet" href="view/css/style.css?v=2">
+    <link rel="stylesheet" href="view/css/style.css?v=3">
     <?php if ($isMobil && $navigateur == "chrome") { ?>
         <link rel="stylesheet" href="view/css/barreChrome.css?v=2">
     <?php }elseif ($isMobil && $navigateur == "edge") { ?>
