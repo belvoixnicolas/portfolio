@@ -1,4 +1,4 @@
-<aside id="siteInfo" class="hidden" hover="false">
+<aside id="siteInfo" class="" hover="false">
     <h2 id="titreSite">Titre du site</h2>
 
     <button id="fermer"><i class="fas fa-times"></i></button>
