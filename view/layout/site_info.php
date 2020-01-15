@@ -1,10 +1,10 @@
-<aside id="siteInfo" class="" hover="false">
+<aside id="siteInfo" class="hidden" hover="false">
     <h2 id="titreSite">Titre du site</h2>
 
     <button id="fermer"><i class="fas fa-times"></i></button>
 
     <div class="conteneur">
-        <img id="imgSite" src="https://images-na.ssl-images-amazon.com/images/I/41penUeXD3L._SX258_BO1,204,203,200_.jpg" alt="Photo du site">
+        <img id="imgSite" format="hauteur" src="https://images-na.ssl-images-amazon.com/images/I/41penUeXD3L._SX258_BO1,204,203,200_.jpg" alt="Photo du site">
     </div>
 
     <div class="description">

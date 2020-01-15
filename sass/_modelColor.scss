@@ -1,3 +1,23 @@
+@mixin bouton ($color: #FFF) {
+    background: scale-color($color, $lightness: -60%);
+    font-family: 'Lobster', cursive;
+    color: $color;
+    text-decoration: none;
+    letter-spacing: .1pc;
+    border-radius: 15px;
+
+    transition: .5s;
+
+    &:hover {
+        letter-spacing: .5pc;
+        box-shadow: 3px 3px 8px 0 #000;
+    }
+
+    &:active {
+        box-shadow: 0 0 0 0 #000;
+    }
+}
+
 %titreNoir {
     @extend %textNoir;
 
@@ -29,4 +49,8 @@
 
 %textBleu {
     color: scale-color($bleu, $lightness: -60%);
+}
+
+%boutonBleu {
+    @include bouton ($bleu);
 }

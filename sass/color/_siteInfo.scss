@@ -39,11 +39,27 @@
         }
 
         img {
-            height: 100%;
-            width: auto;
-            transform: translate(-50%, 0%);
-            top: 0px;
             z-index: 0;
+
+            &[format="hauteur"] {
+                height: 100%;
+                width: auto;
+
+                @media (orientation:portrait) {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+            &[format="largeur"] {
+                height: auto;
+                width: 100%;
+
+                @media (orientation:portrait) {
+                    height: 100%;
+                    width: auto;
+                }
+            }
         }
     }
 
@@ -55,6 +71,16 @@
     }
 
     #tagSite li {
-        
+        @extend %textBleu;
+
+        font-weight: bold;
+        letter-spacing: .1pc;
+        border: 3px solid scale-color($bleu, $lightness: -60%);
+        border-radius: 15px / 50%;
+        padding: .5vh 1vw;
+    }
+
+    a {
+        @extend %boutonBleu;
     }
 }
