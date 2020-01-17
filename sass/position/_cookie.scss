@@ -1,0 +1,58 @@
+#cookie {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content;
+    column-gap: 3vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3vh 2vw;
+    opacity: 1;
+    z-index: 1;
+    transition: .5s;
+
+    &[class="hidden"] {
+        opacity: 0;
+    }
+
+    @if $border == true {
+        border: 1px solid black;
+    }
+
+    p {
+        justify-self: stretch;
+        align-self: center;
+        font-size: 1.5rem;
+
+        @if $border == true {
+            border: 1px solid black;
+        }
+    }
+
+    button {
+        justify-self: center;
+        align-self: center;
+        padding: 1vh 5vw;
+        font-size: 1.5rem;
+        white-space: nowrap;
+
+        @if $border == true {
+            border: 1px solid black;
+        }
+    }
+
+    @media screen and (max-width: 564px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+        row-gap: 2vh;
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            width: 50%;
+        }
+    }
+}

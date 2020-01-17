@@ -10,6 +10,14 @@
         font-family: 'Source Sans Pro', sans-serif;
     }
 
+    a[target="_blank"]::before {
+        @extend %font;
+
+        content:"\f35d";
+        font-size: initial;
+        margin-right: 10px;
+    }
+
 /// nav ///
     @import "color/_nav";
 
@@ -29,4 +37,16 @@
     @import "color/_portfolio";
 
 /// site info ///
-    @import "color/_siteInfo"
+    @import "color/_siteInfo";
+
+/// description /// 
+    @import "color/_description";
+
+/// contact ///
+    @import "color/_contact";
+
+/// footer /// 
+    @import "color/_footer";
+
+/// cookie ///
+    @import "color/_cookie";

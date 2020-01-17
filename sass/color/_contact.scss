@@ -1,0 +1,200 @@
+#contact {
+    .contact {
+        background: $bleu;
+        box-shadow: inset -15px 0px 6px -15px #000;
+
+        h3 {
+            @extend %titreBleu;
+
+            letter-spacing: .1pc;
+        }
+
+        li {
+            h4 {
+                @extend h3;
+
+                text-shadow: none;
+            }
+
+            p {
+                @extend %textBleu;
+
+                letter-spacing: .1pc;
+                font-weight: bold;
+
+                a {
+                    color: inherit;
+                    transition: .5s;
+
+                    &:hover {
+                        letter-spacing: .2pc;
+                    }
+                }
+            }
+        }
+    }
+
+    .formulaire {
+        background: $noir;
+
+        h3 {
+            @extend %titreClaire;
+        }
+
+        form {
+            &:valid {
+                .g-recaptcha {
+                    height: 80px;
+                }
+            }
+
+            .g-recaptcha {
+                height: 0px;
+                overflow: hidden;
+                transition: .5s;
+            }
+
+            input[type="text"], input[type="email"], textarea {
+                @extend %textClaire;
+
+                background: transparent;
+                border: 2px solid $blanc;
+                transition: .5s;
+                
+                &::placeholder {
+                    @extend %textClaire;
+                }
+
+                &:focus, &:valid {
+                    @extend %textNoir;
+
+                    background: $blanc;
+
+                    &::placeholder {
+                        @extend %textNoir;
+                    }
+                }
+
+                &:invalid {
+                    box-shadow: none;
+                }
+            }
+
+            button[type="submit"] {
+                @extend %boutonClaire;
+
+                &[class~="attente"]::before {
+                    @extend %font;
+
+                    content: "\f021";
+                    font-size: initial;
+                    margin-right: 10px;
+                    animation: 2s linear 0s infinite spiner;
+                }
+
+                &[class~="true"] {
+                    background: $bleu !important;
+                    color: scale-color($bleu, $lightness: -60%) !important;
+                    animation: 1.5s 1 bounce;
+
+                    &::before {
+                        @extend %font;
+
+                        content: "\f00c";
+                        font-size: initial;
+                        margin-right: 10px;
+                    }
+                }
+
+                &[class~="false"] {
+                    background: scale-color(red, $lightness: -40%) !important;
+                    color: scale-color(red, $lightness: -10%) !important;
+                    animation: 1.5s 1 shake;
+
+                    &::before {
+                        @extend %font;
+
+                        content: "\f00d";
+                        font-size: initial;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    menu {
+        background: $noir;
+        box-shadow: 0 2px 5px 0px #000;
+        z-index: 1;
+
+        #buttonContact, #buttonFormulaire {
+            @extend %titreClaire;
+
+            background: none;
+            border: none;
+            transition: .5s;
+
+            &:hover {
+                letter-spacing: .1pc;
+            }
+        }
+
+        #buttonContact[class~="focus"] {
+            color: $bleu;
+            letter-spacing: .1pc;
+        }
+
+        #buttonFormulaire[class~="focus"] {
+            color: $marron;
+            letter-spacing: .1pc;
+        }
+    }
+
+    @media screen and (max-width: 690px) {
+        $marronFoncer: scale-color($marron, $lightness: -30%);
+        .formulaire {
+            background: $marron;
+
+            form {
+                input[type="text"], input[type="email"], textarea {
+                    border-color: $marronFoncer;
+                    color: $marronFoncer;
+    
+                    &::placeholder {
+                        color: $marronFoncer;
+                    }
+
+                    &:focus, &:valid {
+                        background: $marronFoncer;
+                        color: $marron;
+    
+                        &::placeholder {
+                            color: $marron;
+                        }
+                    }
+                }
+
+                button[type="submit"] {
+                    background: $marronFoncer;
+                    color: $marron;
+
+                    &:disabled {
+                        background: scale-color($marronFoncer, $lightness: -20%);
+                        color: scale-color($marron, $lightness: -20%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes spiner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

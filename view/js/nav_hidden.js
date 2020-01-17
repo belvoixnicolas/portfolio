@@ -1,12 +1,12 @@
 jQuery(document).ready(function() {
-    changeClass($(window).scrollTop());
+    changeClassNav($(window).scrollTop());
 
     $(window).scroll(function() {
-        changeClass($(window).scrollTop());
+        changeClassNav($(window).scrollTop());
     });
 });
 
-function changeClass (scrollTop) {
+function changeClassNav (scrollTop) {
     if (scrollTop >= 60) {
         $("#nav").removeClass("hidden").addClass("show");
     }else {

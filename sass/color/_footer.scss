@@ -1,0 +1,9 @@
+footer {
+    background: $noir;
+    box-shadow: 0 0 15px 1px #000;
+    position: relative;
+
+    p {
+        @extend %textClaire;
+    }
+}

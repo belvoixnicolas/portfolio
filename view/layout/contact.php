@@ -25,21 +25,22 @@
             </li>
             <li>
                 <h4>titre</h4>
-                <p>text</p>
+                <p>text <a href="tel:+33683126067">Téléphone</a></p>
             </li>
         </ul>
     </section>
     <section class="formulaire hidden">
         <h3>Formulaire contacte</h3>
 
-        <form action="#" method="post">
-            <input type="text" name="nom" id="nom" placeholder="Nom">
-            <input type="text" name="prenom" id="prenom" placeholder="Prénom">
-            <input type="email" name="mail" id="mail" placeholder="Mail">
-            <textarea name="text" id="text" cols="30" rows="10" placeholder="text"></textarea>
-            <div class="g-recaptcha" data-sitekey="6Lc2pb8UAAAAANwT4eDni7RMNQoIryCYvMee25hh"></div>
-            <input type="submit" value="Envoyer">
+        <form id="formContact">
+            <input type="text" name="nom" id="nom" placeholder="Nom" required>
+            <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+            <input type="email" name="mail" id="mail" placeholder="Mail" required>
+            <textarea name="text" id="text" placeholder="text" required></textarea>
+            <div class="g-recaptcha" data-sitekey="6Lc2pb8UAAAAANwT4eDni7RMNQoIryCYvMee25hh" data-callback="correctCaptcha" data-expired-callback="invalid"></div>
+            <button type="submit" class="" disabled>Envoyer</button>
         </form>
+        <script src="view/js/contact.js"></script>
     </section>
     <script src="view/js/choixContact.js"></script>
 </article>

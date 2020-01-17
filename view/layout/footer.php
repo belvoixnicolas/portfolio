@@ -1,3 +1,3 @@
 <footer>
-    <p>Réaliser et crée pa Nicolas Belvoix</p>
+    <p>Réaliser et crée par Nicolas Belvoix</p>
 </footer>

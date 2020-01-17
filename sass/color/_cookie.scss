@@ -1,0 +1,15 @@
+#cookie {
+    background: scale-color($noir, $alpha: -10%);
+
+    p {
+        @extend %textClaire;
+    }
+
+    button {
+        @extend %boutonClaire;
+
+        &:hover {
+            letter-spacing: .1pc;
+        }
+    }
+}

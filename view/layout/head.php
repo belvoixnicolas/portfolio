@@ -4,12 +4,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nicolas Belvoix</title>
 
+    <link rel="stylesheet" href="view/css/animate.min.css">
     <link rel="stylesheet" href="view/css/style.css?v=3">
-    <?php if ($isMobil && $navigateur == "chrome") { ?>
+
+    <?php
+        if (isset($isMobil) && isset($navigateur) && $isMobil) {
+            switch ($navigateur) {
+                case 'chrome':
+    ?>
+
         <link rel="stylesheet" href="view/css/barreChrome.css?v=2">
-    <?php }elseif ($isMobil && $navigateur == "edge") { ?>
+
+    <?php
+                    # code...
+                    break;
+                
+                case 'edge':
+    ?>
+
         <link rel="stylesheet" href="view/css/barreEdge.css?v=2">
-    <?php } ?>
+
+    <?php
+                    break;
+            }
+        }
+    ?>
 
     <link rel="apple-touch-icon" sizes="180x180" href="view/src/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="view/src/favicon/favicon-32x32.png">

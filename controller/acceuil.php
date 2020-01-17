@@ -13,6 +13,15 @@
     $mobileDetect = new Mobile_Detect;
 
 
+    /// verif cookies ///
+
+    if (isset($_COOKIE["autorisation"]) && $_COOKIE["autorisation"]) {
+        $cookie = true;
+    }else {
+        $cookie = false;
+    }
+
+
     /// détecter les téléphone ///
 
     if ($mobileDetect->isTablet() || $mobileDetect->isMobile()) {

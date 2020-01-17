@@ -22,6 +22,13 @@
 
     <!-- ASSIDE -->
     <?php include "view/layout/site_info.php"; ?>
+
+    <!-- cookie -->
+    <?php 
+        if (isset($cookie) && $cookie == false) {
+            include "view/layout/cookie.php";
+        }
+    ?>
 </body>
 <script>
 	var scroll = new SmoothScroll('a[href*="#"]', {

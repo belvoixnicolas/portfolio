@@ -1,35 +1,16 @@
 #contact {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content 1fr;
-    column-gap: 5vw;
-    row-gap: 5vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
     min-height: 100vh;
-    padding: 2vh 2vw;
+    margin-top: 20vh;
 
     @if $border == true {
         border: 1px solid black;
     }
 
-    @media all and (max-width: 770px) {
-        & {
-            grid-template-columns: 1fr;
-            grid-template-rows: min-content min-content auto;
-        }
-
-        menu {
-            display: flex !important;
-        }
-
-        .hidden {
-            display: none;
-        }
-    }
-
     h2 {
-        grid-column: 1 / -1;
-        text-align: center;
-        font-size: 3rem;
+        display: none;
 
         @if $border == true {
             border: 1px solid black;
@@ -38,54 +19,54 @@
 
     menu {
         display: none;
-        flex-flow: row nowrap;
-        justify-content: center;
 
         @if $border == true {
             border: 1px solid black;
-        }
-
-        button {
-            margin: 0 2vw;
-            padding: 1vh 2vw;
-            font-size: 1.5rem;
         }
     }
 
     section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+        row-gap: 5vh;
+        padding: 2vh 2vw;
+
         @if $border == true {
             border: 1px solid black;
+        }
+
+        h3 {
+            font-size: 3rem;
+            text-align: center;
+
+            @if $border == true {
+                border: 1px solid black;
+            }
         }
     }
 
     .contact {
-        h3 {
-            display: none;
-        }
-
         ul {
             display: flex;
             flex-flow: column nowrap;
-            justify-content: space-around;
-            align-items: stretch;
+            justify-content: start;
             height: 100%;
 
             @if $border == true {
                 border: 1px solid black;
-            } 
+            }
 
             li {
-                margin: 2vh 2vw;
-                padding: 2vh 2vw;
+                margin-bottom: 5vh;
 
                 @if $border == true {
                     border: 1px solid black;
-                } 
+                }
 
                 h4 {
-                    text-align: center;
                     font-size: 2rem;
-                    margin-bottom: 2vh;
+                    margin-bottom: 10px;
 
                     @if $border == true {
                         border: 1px solid black;
@@ -93,7 +74,8 @@
                 }
 
                 p {
-                    font-size: 1.5rem;
+                    font-size: 1.65rem;
+                    padding-left: 1pc;
 
                     @if $border == true {
                         border: 1px solid black;
@@ -104,40 +86,36 @@
     }
 
     .formulaire {
-        padding: 2vh 2vw;
-
-        h3 {
-            display: none;
-        }
-
         form {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(2, min-content) 40% min-content 1fr;
+            grid-template-rows: repeat(2, min-content) 1fr min-content;
             column-gap: 2vw;
-            row-gap: 3vh;
-            height: 100%;
+            row-gap: 5vh;
 
             @if $border == true {
                 border: 1px solid black;
-            } 
-
-            input {
-                justify-self: stretch;
-                align-self: center;
-                padding: 1vh 1vw;
-                font-size: 2rem;
-                overflow: hidden;
             }
 
-            #nom {
-                grid-column: 1 / span 1;
-                grid-row: 1 / span 1;
+            input, textarea {
+                width: 100%;
+                padding: 1vh 2vw;
+                font-size: 2rem;
+
+                @if $border == true {
+                    border: 1px solid black;
+                }
             }
 
             #prenom {
-                grid-column: -1 / -2;
+                grid-column: 2 / span 1;
                 grid-row: 1 / span 1;
+            }
+
+            #nom {
+                @extend #prenom;
+
+                grid-column: 1 / span 1;
             }
 
             #mail {
@@ -145,26 +123,92 @@
                 grid-row: 2 / span 1;
             }
 
-            #text {
-                grid-column: 1 / -1;
+            textarea {
+                @extend #mail;
+
                 grid-row: 3 / span 1;
-                padding: 1vh 1vw;
-                font-size: 1.5rem;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 1.65rem;
+
+                @if $border == true {
+                    border: 1px solid black;
+                }
             }
 
             .g-recaptcha {
-                grid-column: 1 / -1;
+                @extend #mail;
+
                 grid-row: 4 / span 1;
                 justify-self: center;
-                align-self: center;
+                max-width: 100%;
             }
 
-            input[type=submit] {
-                grid-column: 1 / -1;
+            button[type="submit"] {
+                @extend #mail;
+
                 grid-row: 5 / span 1;
                 justify-self: center;
-                align-self: center;
                 width: 50%;
+                padding: 1vh 2vw;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 690px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+        overflow: hidden;
+
+        menu {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            grid-column: 1 / -1;
+            grid-row: 1 / span 1;
+            padding: 1vh 0;
+
+            button {
+                font-size: 2.5rem;
+            }
+        }
+
+        section {
+            grid-column: 1 / -1;
+            grid-row: 2 / span 1;
+            grid-template-rows: 1fr;
+            overflow: hidden;
+            width: 90%;
+            position: relative;
+
+            transition: left .5s, right .5s;
+
+            h3 {
+                display: none;
+            }
+        }
+
+        .contact {
+            justify-self: left;
+            left: 0%;
+
+            ul {
+                max-width: 90%;
+                width: max-content;
+                margin-left: 10%;
+            }
+
+            &[class~="hidden"] {
+                left: -80%;
+            }
+        }
+
+        .formulaire {
+            justify-self: right;
+            right: 0%;
+
+            &[class~="hidden"] {
+                right: -80%;
             }
         }
     }
