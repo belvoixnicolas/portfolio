@@ -1,4 +1,4 @@
-<article id="contact">
+<article id="contact" class="scrollanim" scroll_anim_height="80">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <h2>Me contacter</h2>
 
@@ -11,22 +11,57 @@
         <h3>contact</h3>
 
         <ul>
-            <li>
-                <h4>titre</h4>
-                <p>text</p>
-            </li>
-            <li>
-                <h4>titre</h4>
-                <p>text</p>
-            </li>
-            <li>
-                <h4>titre</h4>
-                <p>text</p>
-            </li>
-            <li>
-                <h4>titre</h4>
-                <p>text <a href="tel:+33683126067">Téléphone</a></p>
-            </li>
+            <?php if (isset($data) && is_array($data)) { ?>
+                <?php if (isset($data["prenom"]) && $data["prenom"] || isset($data["nom"]) && $data["nom"]) { ?>
+                    <li>
+                        <h4>Nom et prénom</h4>
+                        <p><?php 
+                            if (isset($data["prenom"], $data["nom"]) && $data["prenom"] != "" && $data["nom"] != "") {
+                                echo htmlspecialchars("{$data["nom"]} {$data["prenom"]}");
+                            }elseif (isset($data["prenom"]) && $data["prenom"] != "") {
+                                echo htmlspecialchars($data["prenom"]);
+                            }elseif (isset($data["nom"]) && $data["nom"] != "") {
+                                echo htmlspecialchars($data["nom"]);
+                            }else {
+                                echo "N/A";
+                            }
+                        ?></p>
+                    </li>
+                <?php } ?>
+
+                <?php if (isset($data["mail"]) && $data["mail"] != "") { ?>
+                    <li>
+                        <h4>Mail</h4>
+                        <p><?php 
+                            if (isset($isMobil) && $isMobil) {
+                                echo "<a href=\"mailto:" . htmlspecialchars($data["mail"]) . "\">" . htmlspecialchars($data["mail"]) . "</a>";
+                            }else {
+                                echo htmlspecialchars($data["mail"]);
+                            }
+                        ?></p>
+                    </li>
+                <?php } ?>
+
+                <?php if (isset($data["tel"]) && $data["tel"] != "") { ?>
+                    <li>
+                        <h4>Téléphone</h4>
+                        <p><?php
+                            if (isset($isMobil) && $isMobil) {
+                                echo "<a href=\"tel:" . htmlspecialchars($data["tel"]) . "\">" . htmlspecialchars(implode(".", str_split(str_replace("+33", "0", $data["tel"]), 2))) . "</a>";
+                            }else {
+                                echo htmlspecialchars(implode(".", str_split(str_replace("+33", "0", $data["tel"]), 2)));
+                            }
+                        ?></p>
+                    </li>
+                <?php } ?>
+
+                <?php if (isset($data["siret"]) && $data["siret"] != "") { ?>
+                    <li>
+                        <h4>Siret</h4>
+                        <p><?= htmlspecialchars($data["siret"]); ?></p>
+                    </li>
+                <?php } ?>
+            <?php } ?>
         </ul>
     </section>
     <section class="formulaire hidden">

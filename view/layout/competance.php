@@ -1,4 +1,4 @@
-<article id="competance">
+<article id="competance" class="scrollanim" scroll_anim_height="80">
     <div class="main">
         <h2>Compétances</h2>
 

@@ -4,6 +4,11 @@
     ///////////////////////////
 
     require_once("model/Mobile_Detect.php");
+    require_once("model/visite.php");
+    require_once("model/portfolio.php");
+    require_once("model/site_data.php");
+    require_once("model/services.php");
+    require_once("model/deroulement.php");
 
 
     ////////////////////////
@@ -11,6 +16,11 @@
     ////////////////////////
     
     $mobileDetect = new Mobile_Detect;
+    $visite = new visite;
+    $portfolio = new portfolio;
+    $siteData = new siteData;
+    $services = new services;
+    $deroulement = new deroulement;
 
 
     /// verif cookies ///
@@ -42,6 +52,27 @@
     }else {
         $navigateur = "inconnue";
     } 
+
+
+    /// liste site ///
+
+    $sites = $portfolio->getSites();
+
+
+    /// Data du site ///
+
+    $data = $siteData->getData();
+
+
+    /// liste des services ///
+
+    $dataServices = $services->getServices();
+
+
+    /// Liste du deroulement ///
+
+    $dataDeroulement = $deroulement->getDeroulement();
+    var_dump($dataDeroulement);
 
     
     include "view/acceuil.php";

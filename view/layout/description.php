@@ -1,4 +1,6 @@
-<article id="description">
-    <h2>Description</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi porro cum impedit dolorum modi quis aut architecto! Rerum repellendus exercitationem possimus impedit quos. Porro quis suscipit itaque aliquam ipsam corrupti animi magnam iusto labore, repellendus non temporibus voluptates aspernatur, facere consequuntur distinctio cupiditate tenetur ipsa adipisci eveniet perferendis voluptatum quaerat error sunt. Voluptates hic illo placeat dicta eveniet aliquid laudantium, debitis facere, numquam dolores earum odio accusamus! Reiciendis quod cum doloremque, deserunt ex magnam ipsum mollitia sunt possimus porro rem, quam ipsam aliquam? Adipisci ut repellendus alias sint iure. Magnam numquam incidunt deserunt dicta modi aliquid, unde molestias necessitatibus, provident exercitationem architecto! Illo porro, vel iure est quisquam odit dolor id, sapiente, saepe aliquid asperiores aperiam fuga commodi quia praesentium qui vero dolorum! Deleniti quaerat rerum maxime delectus dolore voluptatem consequatur dolores aut obcaecati voluptatum sapiente quasi eum rem est, eius alias eaque in enim consequuntur! Vero ullam laborum praesentium!</p>
-</article>
+<?php if (isset($data["description"]) && $data["description"] != "") { ?>
+    <article id="description" class="scrollanim" scroll_anim_height="80">
+        <h2>Description</h2>
+        <p><?= htmlspecialchars($data["description"]); ?></p>
+    </article>
+<?php } ?>

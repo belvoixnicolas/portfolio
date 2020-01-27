@@ -11,9 +11,4 @@ footer {
     p {
         font-size: 1.5rem;
     }
-
-    p::before {
-        content: "\0000A9  " ;
-        font-size: 2rem;
-    }
 }

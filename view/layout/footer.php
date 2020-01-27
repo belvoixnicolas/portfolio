@@ -1,3 +1,3 @@
 <footer>
-    <p>Réaliser et crée par Nicolas Belvoix</p>
+    <p>Copyright © <?= date("Y") ?> Nicolas Belvoix</p>
 </footer>

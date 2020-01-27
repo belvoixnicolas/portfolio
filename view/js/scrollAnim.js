@@ -81,8 +81,15 @@ function animation (list) {
         let time = list.duration;
         let delay = list.delay;
         let animation = list.animation;
+        let valeurCss = time + "s linear " + delay + "s 1 " + animation;
 
-        $(list.dom).attr("style", "").css("animation", time + "s linear " + delay + "s 1 " + animation);
+        let css = {
+            "animation" : valeurCss,
+            "-webkit-animation" : valeurCss,
+            "-moz-animation" : valeurCss 
+        };
+
+        $(list.dom).attr("style", "").css(css);
 
         setTimeout(function () {
             $(list.dom).attr("style", "");
