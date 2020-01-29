@@ -1,10 +1,10 @@
 var correctCaptcha = function() {
     $("#contact form button").prop("disabled", true).removeAttr("disabled");
-}
+};
 
 var invalid = function() {
     $("#contact form button").prop("disabled", true);
-}
+};
 
 jQuery(document).ready(function() {
     $("#formContact").on("submit", function() {
@@ -21,36 +21,35 @@ jQuery(document).ready(function() {
         if (nom.length > 0 && prenom.length > 0 && mail.length > 0 && text.length > 0 && captcha.length > 0) {
             console.log("debut de l'envoie");
             $.ajax({
-                url: "captcha.php",
+                url: "index.php",
                 type : 'POST',
-                data : {"response" : captcha},
+                data : {
+                    "app" : "mail",
+                    "nom" : nom,
+                    "prenom" : prenom,
+                    "mail" : mail,
+                    "text" : text,
+                    "captcha": captcha
+                 },
                 dataType: 'json',
             }).done(function(data) {
                 if (typeof data == 'object') {
-                    if (data.success === true && text != "false") {
-                        console.log("valid");
+                    if (data.resultat){
                         Valid();
-                    }else if (data.success === true && text == "false") {
-                        console.log("erreur programmer");
-                        error();
                     }else{
-                        console.log("erreur captcha");
-                        console.log(data);
+                        console.error(data.info);
                         error();
                     }
                 }else {
-                    console.log("donner non attendue");
-                    console.log(data);
+                    console.error("donner recu non attendue");
                     error();
                 }
-                console.log(typeof data);
             }).fail(function (data) {
-                console.log("erreur critique");
-                console.log(data);
+                console.error("erreur critique");
                 error();
             });
         }else {
-            console.log("formulaire non valide");
+            console.error("formulaire non valide");
             error();
         }
     });

@@ -75,7 +75,5 @@
             <div class="g-recaptcha" data-sitekey="6Lc2pb8UAAAAANwT4eDni7RMNQoIryCYvMee25hh" data-callback="correctCaptcha" data-expired-callback="invalid"></div>
             <button type="submit" class="" disabled>Envoyer</button>
         </form>
-        <script src="view/js/contact.js"></script>
     </section>
-    <script src="view/js/choixContact.js"></script>
 </article>

@@ -37,7 +37,7 @@ jQuery(document).ready(function() {
                     if (typeof data.tag == "object" && data.tag !== null) {
                         var tag = data.tag;
 
-                        for (let index = 0; index < tag.length; index++) {
+                        for (index = 0; index < tag.length; index++) {
                             $("#siteInfo #tagSite").append("<li>" + tag[index] + "</li>");
                         }
                     }

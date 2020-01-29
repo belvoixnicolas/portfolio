@@ -9,6 +9,7 @@
     require_once("model/site_data.php");
     require_once("model/services.php");
     require_once("model/deroulement.php");
+    require_once("model/competance.php");
 
 
     ////////////////////////
@@ -21,6 +22,7 @@
     $siteData = new siteData;
     $services = new services;
     $deroulement = new deroulement;
+    $competance = new competance;
 
 
     /// verif cookies ///
@@ -72,7 +74,11 @@
     /// Liste du deroulement ///
 
     $dataDeroulement = $deroulement->getDeroulement();
-    var_dump($dataDeroulement);
+
+
+    /// liste des compétances ///
+
+    $dataCompetance = $competance->getCompetance();
 
     
     include "view/acceuil.php";

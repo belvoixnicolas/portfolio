@@ -2,4 +2,5 @@
 /.sass-cache
 /doc
 /view/src/logo
+/package.json
 /package-lock.json

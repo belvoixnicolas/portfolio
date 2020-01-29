@@ -26,5 +26,3 @@
         <i class="fas fa-bars"></i>
     </button>
 </nav>
-<script src="view\js\nav_menuburger.js"></script>
-<script src="view\js\nav_hidden.js"></script>

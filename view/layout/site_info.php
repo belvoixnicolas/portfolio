@@ -17,4 +17,3 @@
 
     <a id="linkSite" href="" target="_blank" rel="external" data="">Visiter</a>
 </aside>
-<script src="view/js/siteInfoHover.js"></script>

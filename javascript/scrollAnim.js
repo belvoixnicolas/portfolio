@@ -13,20 +13,20 @@ jQuery(document).ready(function() {
 });
 
 function init () {
-    let classScroll = $(".scrollanim");
-    let listeParam = [];
+    var classScroll = $(".scrollanim");
+    var listeParam = [];
 
-    for (let index = 0; index < classScroll.length; index++) {
-        let dom = classScroll[index];
-        let position = $(dom).offset();
-        let animation = "";
-        let animationAttr = $(dom).attr("scroll_anim_css");
-        let duration = "1";
-        let durationAttr = $(dom).attr("scroll_anim_duration");
-        let delay = "0"
-        let delayAttr = $(dom).attr("scroll_anim_delay");
-        let height = 50;
-        let heightAttr = $(dom).attr("scroll_anim_height");
+    for (index = 0; index < classScroll.length; index++) {
+        var dom = classScroll[index];
+        var position = $(dom).offset();
+        var animation = "";
+        var animationAttr = $(dom).attr("scroll_anim_css");
+        var duration = "1";
+        var durationAttr = $(dom).attr("scroll_anim_duration");
+        var delay = "0";
+        var delayAttr = $(dom).attr("scroll_anim_delay");
+        var height = 50;
+        var heightAttr = $(dom).attr("scroll_anim_height");
 
         if (animationAttr) {
             animation = animationAttr;
@@ -57,7 +57,7 @@ function init () {
 function verifScroll (list) {
     list.forEach(element => {
         if (element.afficher == false) {
-            let departAnim = element.position - ($(window).height() / 100 * element.height);
+            var departAnim = element.position - ($(window).height() / 100 * element.height);
 
             if ($(window).scrollTop() >= departAnim) {
                 element.afficher = true;
@@ -78,12 +78,12 @@ function animation (list) {
             }, list.delay * 1000);
         }
     }else {
-        let time = list.duration;
-        let delay = list.delay;
-        let animation = list.animation;
-        let valeurCss = time + "s linear " + delay + "s 1 " + animation;
+        var time = list.duration;
+        var delay = list.delay;
+        var animation = list.animation;
+        var valeurCss = time + "s linear " + delay + "s 1 " + animation;
 
-        let css = {
+        var css = {
             "animation" : valeurCss,
             "-webkit-animation" : valeurCss,
             "-moz-animation" : valeurCss 
@@ -99,7 +99,7 @@ function animation (list) {
 
 function updateList (list) {
     list.forEach(element => {
-        let position = $(element.dom).offset();
+        var position = $(element.dom).offset();
 
         element.position = position.top;
     });
