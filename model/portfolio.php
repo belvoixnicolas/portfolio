@@ -3,6 +3,7 @@
 
     class portfolio extends connect {
         private const CHEMIN = "view/src/data_site/";
+        private const CHEMIN_APK = "view/src/apk/";
 
         public function getSites() {
             $sites = array();
@@ -49,7 +50,7 @@
             $bdd = $this->coBd();
             
             if ($bdd) {
-                $requete = $bdd->prepare("SELECT id, titre, description, url, img FROM portfolio WHERE id = :id");
+                $requete = $bdd->prepare("SELECT id, type, titre, description, url, img FROM portfolio WHERE id = :id");
                 $requete->execute([
                     ":id" => $id
                 ]);
@@ -70,14 +71,16 @@
                     }
 
                     if (is_null($result['url']) == false) {
-                        $a = @get_headers($result['url']);
-                        if ($a) {
-                            //*** On a retour : on test le header HTTP
-                            if (strstr($a[0],'404')) {
-                                $result['url'] = null;
+                        if ($result["type"] == "web") {
+                            if ($this->verfiUrl($result["url"]) == false) {
+                                $result["url"] = null;
                             }
-                        }else{
-                            $result['url'] = null;
+                        }elseif ($result["type"] == "app") {
+                            if ($this->verfiapk($result["url"]) == false) {
+                                $result["url"] = null;
+                            }
+                        }else {
+                            $result["url"] = null;
                         }
                     }
 
@@ -225,6 +228,28 @@
                 }else {
                     return false;
                 }
+            }else {
+                return false;
+            }
+        }
+
+        private function verfiUrl($url) {
+            $a = @get_headers($url);
+            if ($a) {
+                //*** On a retour : on test le header HTTP
+                if (strstr($a[0],'404')) {
+                    return false;
+                }else {
+                    return true;
+                }
+            }else{
+                return false;
+            }
+        }
+
+        private function verfiapk($url) {
+            if (file_exists(self::CHEMIN_APK . $url)) {
+                return true;
             }else {
                 return false;
             }

@@ -43,7 +43,12 @@ jQuery(document).ready(function() {
                     }
 
                     if (data.url != "" && data.url !== null) {
-                        $("#siteInfo #linkSite").attr("href", data.url);
+                        if (data.type == "app") {
+                            $("#siteInfo #linkSite").attr("href", "view/src/apk/" + data.url);
+                            $("#siteInfo #linkSite").attr("download", data.titre + ".apk");
+                        }else {
+                            $("#siteInfo #linkSite").attr("href", data.url);
+                        }
 
                         if (data.id > 0 && data.id !== null) {
                             $("#siteInfo #linkSite").attr("data", data.id);
@@ -85,7 +90,7 @@ jQuery(document).ready(function() {
             $("#siteInfo #imgSite").attr("src", "").attr("alt", "").attr("format", "");
             $("#siteInfo #txtSite").text("");
             $("#siteInfo #tagSite").html("");
-            $("#siteInfo #linkSite").attr("style", "").attr("href", "").attr("data", "");
+            $("#siteInfo #linkSite").attr("style", "").attr("href", "").attr("data", "").removeAttr("download");
         } ,600);
     });
 });

@@ -240,7 +240,12 @@ jQuery(document).ready(function() {
                     }
 
                     if (data.url != "" && data.url !== null) {
-                        $("#siteInfo #linkSite").attr("href", data.url);
+                        if (data.type == "app") {
+                            $("#siteInfo #linkSite").attr("href", "view/src/apk/" + data.url);
+                            $("#siteInfo #linkSite").attr("download", data.titre + ".apk");
+                        }else {
+                            $("#siteInfo #linkSite").attr("href", data.url);
+                        }
 
                         if (data.id > 0 && data.id !== null) {
                             $("#siteInfo #linkSite").attr("data", data.id);
@@ -282,7 +287,7 @@ jQuery(document).ready(function() {
             $("#siteInfo #imgSite").attr("src", "").attr("alt", "").attr("format", "");
             $("#siteInfo #txtSite").text("");
             $("#siteInfo #tagSite").html("");
-            $("#siteInfo #linkSite").attr("style", "").attr("href", "").attr("data", "");
+            $("#siteInfo #linkSite").attr("style", "").attr("href", "").attr("data", "").removeAttr("download");
         } ,600);
     });
 });
@@ -304,17 +309,17 @@ function init () {
     var classScroll = $(".scrollanim");
     var listeParam = [];
 
-    for (index = 0; index < classScroll.length; index++) {
-        var dom = classScroll[index];
-        var position = $(dom).offset();
-        var animation = "";
-        var animationAttr = $(dom).attr("scroll_anim_css");
-        var duration = "1";
-        var durationAttr = $(dom).attr("scroll_anim_duration");
-        var delay = "0";
-        var delayAttr = $(dom).attr("scroll_anim_delay");
-        var height = 50;
-        var heightAttr = $(dom).attr("scroll_anim_height");
+    for (let index = 0; index < classScroll.length; index++) {
+        let dom = classScroll[index];
+        let position = $(dom).offset();
+        let animation = "";
+        let animationAttr = $(dom).attr("scroll_anim_css");
+        let duration = "1";
+        let durationAttr = $(dom).attr("scroll_anim_duration");
+        let delay = "0";
+        let delayAttr = $(dom).attr("scroll_anim_delay");
+        let height = 50;
+        let heightAttr = $(dom).attr("scroll_anim_height");
 
         if (animationAttr) {
             animation = animationAttr;

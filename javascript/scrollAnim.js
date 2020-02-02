@@ -16,17 +16,17 @@ function init () {
     var classScroll = $(".scrollanim");
     var listeParam = [];
 
-    for (index = 0; index < classScroll.length; index++) {
-        var dom = classScroll[index];
-        var position = $(dom).offset();
-        var animation = "";
-        var animationAttr = $(dom).attr("scroll_anim_css");
-        var duration = "1";
-        var durationAttr = $(dom).attr("scroll_anim_duration");
-        var delay = "0";
-        var delayAttr = $(dom).attr("scroll_anim_delay");
-        var height = 50;
-        var heightAttr = $(dom).attr("scroll_anim_height");
+    for (let index = 0; index < classScroll.length; index++) {
+        let dom = classScroll[index];
+        let position = $(dom).offset();
+        let animation = "";
+        let animationAttr = $(dom).attr("scroll_anim_css");
+        let duration = "1";
+        let durationAttr = $(dom).attr("scroll_anim_duration");
+        let delay = "0";
+        let delayAttr = $(dom).attr("scroll_anim_delay");
+        let height = 50;
+        let heightAttr = $(dom).attr("scroll_anim_height");
 
         if (animationAttr) {
             animation = animationAttr;
