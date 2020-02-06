@@ -1,7 +1,8 @@
 #description {
     background-color: $noir;
-    margin-top: 35vh;
     position: relative;
+    margin: 10vh 0;
+    filter: drop-shadow(0 0 5px #000);
 
     &::before {
         @extend %bordureDeroulement;

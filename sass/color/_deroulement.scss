@@ -10,6 +10,7 @@
 #deroulement {
     background: url("../src/img/background_deroulement.jpg") center fixed no-repeat;
     background-size: cover;
+    margin: 10vh 0;
 
     &::before {
         @extend %bordureDeroulement;

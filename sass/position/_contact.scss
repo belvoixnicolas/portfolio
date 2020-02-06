@@ -3,7 +3,7 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
     min-height: 100vh;
-    margin-top: 20vh;
+    padding-bottom: 0 !important;
 
     @if $border == true {
         border: 1px solid black;

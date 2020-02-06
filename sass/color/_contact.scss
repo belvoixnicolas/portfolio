@@ -17,19 +17,19 @@
                 font-size: 2.25rem;
             }
 
-            &:nth-child(1) h4::before {
+            &[class~="ident"] h4::before {
                 content: "\f007";
             }
 
-            &:nth-child(2) h4::before {
+            &[class~="mail"] h4::before {
                 content: "\f0e0";
             }
 
-            &:nth-child(3) h4::before {
+            &[class~="tel"] h4::before {
                 content: "\f10b";
             }
 
-            &:nth-child(4) h4::before {
+            &[class~="siret"] h4::before {
                 content: "\f1ad";
             }
 

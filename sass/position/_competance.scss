@@ -1,6 +1,4 @@
 #competance {
-    margin: 20vh 0;
-
     @if $border == true {
         border: 1px solid black;
     }
@@ -10,7 +8,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: min-content min-content;
         row-gap: 5vh;
-        padding: 2vh 2vw;
+        padding: 5vh 2vw;
 
         @if $border == true {
             border: 1px solid black;

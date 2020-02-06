@@ -44,21 +44,11 @@
             &[format="hauteur"] {
                 height: 100%;
                 width: auto;
-
-                @media (orientation:portrait) {
-                    height: auto;
-                    width: 100%;
-                }
             }
 
             &[format="largeur"] {
                 height: auto;
                 width: 100%;
-
-                @media (orientation:portrait) {
-                    height: 100%;
-                    width: auto;
-                }
             }
         }
     }
@@ -82,5 +72,9 @@
 
     a {
         @extend %boutonBleu;
+
+        &[download]::before {
+            content: "\f019";
+        }
     }
 }

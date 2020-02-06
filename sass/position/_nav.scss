@@ -121,10 +121,19 @@ nav {
     }
 }
 
+main {
+    display: grid;
+    grid-auto-rows: min-content;
+
+    row-gap: 25vh;
+}
+
 main > article {
     padding-top: calc(10vh + 2vh * 2) !important;
+    padding-bottom: calc(10vh + 2vh * 2) !important;
 
     @media all and (max-width: 830px) {
         padding-top: calc(2rem + 2vh * 2 + 2vh * 2) !important;
+        padding-bottom: calc(2rem + 2vh * 2 + 2vh * 2) !important;
     }
 }

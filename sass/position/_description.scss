@@ -3,7 +3,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: min-content 1fr;
     row-gap: 5vh;
-    min-height: 100vh;
     padding: 2vh 2vw;
 
     @if $border == true {
