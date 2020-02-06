@@ -5,7 +5,7 @@
     <title>Nicolas Belvoix</title>
 
     <link rel="stylesheet" href="view/css/animate.min.css">
-    <link rel="stylesheet" href="view/css/style.css?v=3">
+    <link rel="stylesheet" href="view/css/style.css?v=4">
 
     <?php
         if (isset($isMobil) && isset($navigateur) && $isMobil) {
