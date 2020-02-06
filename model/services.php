@@ -5,12 +5,7 @@
 
         public function __construct() {
             if ($this->verifChemin() == false) {
-                $array = array(
-                    "Services 1" => $this->modelTableServices("img_1.jpg", "text"),
-                    "Services 2" => $this->modelTableServices("img_2.jpg", "text"),
-                    "Services 3" => $this->modelTableServices("img_3.jpg", "text"),
-                    "Services 4" => $this->modelTableServices("img_4.jpg", "text"),
-                );
+                $array = array();
 
                 file_put_contents(self::CHEMIN, json_encode($array));
             }

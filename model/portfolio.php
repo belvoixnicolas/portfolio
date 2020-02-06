@@ -1,5 +1,5 @@
 <?php
-    require_once("model\connect.php");
+    require_once("model/connect.php");
 
     class portfolio extends connect {
         private const CHEMIN = "view/src/data_site/";

@@ -5,11 +5,7 @@
 
         public function __construct() {
             if ($this->verifChemin() == false) {
-                $array = array(
-                    "Compétances 1" => $this->modelTableCompetance("img_1.jpg"),
-                    "Compétances 2" => $this->modelTableCompetance("img_2.jpg"),
-                    "Compétances 3" => $this->modelTableCompetance("img_3.jpg")
-                );
+                $array = array();
 
                 file_put_contents(self::CHEMIN, json_encode($array));
             }

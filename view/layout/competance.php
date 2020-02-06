@@ -7,7 +7,7 @@
                 <?php 
                     foreach ($dataCompetance as $key => $value) { 
                         $titre = "Titre";
-                        $img = "view/src/img/competanceDefau.jpg";
+                        $img = "view/src/img/panneauGris.svg";
 
                         if ($key != "" && is_null($key) == false) {
                             $titre = $key;

@@ -6,7 +6,7 @@
             <?php 
                 foreach ($dataServices as $key => $value) { 
                     $titre = "Titre";
-                    $img = "view/src/img/servicesDefau.jpg";
+                    $img = "view/src/img/panneauGris.svg";
                     $text = "";
 
                     if ($key != "" && is_null($key) == false) {

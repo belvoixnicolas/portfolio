@@ -5,13 +5,13 @@
         public function __construct() {
             if ($this->verifChemin() == false) {
                 $array = array(
-                    "titre" => "titre",
-                    "description" => "Description",
-                    "nom" => "Nom",
-                    "prenom" => "Prénom",
-                    "mail" => "mail@mail",
-                    "tel" => "+33600000000",
-                    "siret" => "00000000000000"
+                    "titre" => "",
+                    "description" => "",
+                    "nom" => "",
+                    "prenom" => "",
+                    "mail" => "",
+                    "tel" => "",
+                    "siret" => ""
                 );
 
                 file_put_contents(self::CHEMIN, json_encode($array));

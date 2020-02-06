@@ -5,11 +5,7 @@
 
         public function __construct() {
             if ($this->verifChemin() == false) {
-                $array = array(
-                    "Déroulement 1" => $this->modelTableDeroulement("img_1.jpg", "text"),
-                    "Déroulement 2" => $this->modelTableDeroulement("img_2.jpg", "text"),
-                    "Déroulement 3" => $this->modelTableDeroulement("img_3.jpg", "text")
-                );
+                $array = array();
 
                 file_put_contents(self::CHEMIN, json_encode($array));
             }

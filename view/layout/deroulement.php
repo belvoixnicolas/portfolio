@@ -6,7 +6,7 @@
             <?php 
                 foreach ($dataDeroulement as $key => $value) { 
                     $titre = "Titre";
-                    $img = "view/src/img/deroulementDefau.jpg";
+                    $img = "view/src/img/panneauNoir.svg";
                     $text = "";
 
                     if ($key != "" && is_null($key) == false) {
@@ -20,7 +20,7 @@
                     }
             ?>
                 <section>
-                    <img src="<?= htmlspecialchars($img); ?>" alt="imagr <?= htmlspecialchars($titre); ?>">
+                    <img src="<?= htmlspecialchars($img); ?>" alt="image <?= htmlspecialchars($titre); ?>">
                     <h3><?= htmlspecialchars($titre); ?></h3>
                     <p><?= htmlspecialchars($text); ?></p>
                 </section>
