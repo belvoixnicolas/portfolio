@@ -3,7 +3,8 @@
         private const HEADERS = array(
             "MIME-Version" => "1.0",
             "Content-type" => "text/html; charset=UTF-8",
-            "From" => "test <test@test.fr>"
+            "From" => "Nicolas <belvoixnicolas1997@gmail.com>",
+            "Reply-To" => "Nicolas <belvoixnicolas1997@gmail.com>"
         );
         private const MAIL = "belvoixnicolas1997@gmail.com";
         private const NOM = "Nicolas";

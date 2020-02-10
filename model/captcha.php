@@ -8,7 +8,7 @@
 
             $reponse = json_decode(file_get_contents($url), true);
 
-            if ($_SERVER["SERVER_NAME"] == "localhost") {
+            if ($reponse["hostname"] == "localhost") {
                 if ($reponse["hostname"] == $_SERVER["SERVER_NAME"] && $reponse["success"]) {
                     return true;
                 } else {
