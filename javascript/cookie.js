@@ -13,20 +13,18 @@ jQuery(document).ready(function() {
             dataType: "json"
         }).done(function (data) {
             if (typeof data == "boolean" && data) {
-                console.log("cookie envoyer");
-                
                 setTimeout(function() {
                     $("#cookie").remove();
                 }, 1000);
             }else {
-                console.log("resultat non attendue");
+                console.error("resultat non attendue");
                 
                 setTimeout(function() {
                     $("#cookie").remove();
                 }, 1000);
             }
         }).fail(function () {
-            console.log("echec");
+            console.error("echec cookie");
             
             setTimeout(function() {
                 $("#cookie").remove();

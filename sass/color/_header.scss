@@ -3,7 +3,7 @@ header {
     background-size: cover;
     border-bottom-left-radius: 50% 10%;
     border-bottom-right-radius: 50% 10%;
-    box-shadow: 0 0 14px 3px $noir;
+    box-shadow: 0 0 14px 3px $noir, inset 0 0 9em 1em #000;
 
     &[class=anim] {
         animation: 4s ease 0s infinite alternate radiusAnim;
@@ -18,8 +18,17 @@ header {
         }
     }
 
+    img, h1 {
+        opacity: .85;
+        filter: drop-shadow(0 0 .5em $noir);
+    }
+
     h1 {
-        @extend %titreNoir;
+        @extend %textNoir;
+
+        color: #000;
+        font-weight: bold;
+        letter-spacing: .3pc;
     }
 }
 

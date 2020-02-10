@@ -46,5 +46,6 @@ module.exports = function(grunt) {
   
     // Définition des tâches Grunt
     grunt.registerTask("dev", ['compass', 'autoprefixer', "concat:dist"]);
+    grunt.registerTask("test", ["concat:dist", "file_minify"]);
     grunt.registerTask("instal", ['compass', 'autoprefixer', "concat:dist", "file_minify"]);
   };

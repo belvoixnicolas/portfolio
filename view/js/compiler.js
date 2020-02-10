@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
         var captcha = grecaptcha.getResponse();
 
         if (nom.length > 0 && prenom.length > 0 && mail.length > 0 && text.length > 0 && captcha.length > 0) {
-            console.log("debut de l'envoie");
+            
             $.ajax({
                 url: "index.php",
                 type : 'POST',
@@ -103,20 +103,18 @@ jQuery(document).ready(function() {
             dataType: "json"
         }).done(function (data) {
             if (typeof data == "boolean" && data) {
-                console.log("cookie envoyer");
-                
                 setTimeout(function() {
                     $("#cookie").remove();
                 }, 1000);
             }else {
-                console.log("resultat non attendue");
+                console.error("resultat non attendue");
                 
                 setTimeout(function() {
                     $("#cookie").remove();
                 }, 1000);
             }
         }).fail(function () {
-            console.log("echec");
+            console.error("echec cookie");
             
             setTimeout(function() {
                 $("#cookie").remove();

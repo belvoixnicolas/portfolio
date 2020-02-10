@@ -6,6 +6,7 @@ header {
     position: relative;
     min-height: 100vh;
     padding: 2vh 2vw;
+    margin-bottom: 10vh;
     z-index: 1;
 
     @if $border == true {

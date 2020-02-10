@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
         var captcha = grecaptcha.getResponse();
 
         if (nom.length > 0 && prenom.length > 0 && mail.length > 0 && text.length > 0 && captcha.length > 0) {
-            console.log("debut de l'envoie");
+            
             $.ajax({
                 url: "index.php",
                 type : 'POST',

@@ -1,2 +1,13 @@
 User-agent: *
-Disallow: /
+Disallow: /*.json$
+Disallow: /model/
+Disallow: /apk/
+Disallow: /data*/
+Disallow: /favicon/
+Disallow: /img/
+Disallow: /logo/
+Allow: /
+Allow: /data_site/
+
+Sitemap: http://www.nicolas-belvoix.fr/sitemap.xml
+Sitemap: https://www.nicolas-belvoix.fr/sitemap.xml

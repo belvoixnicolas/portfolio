@@ -1,20 +1,12 @@
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>401</title>
 
-    <?php
-        $titre = "";
-
-        if (isset($data["titre"]) && $data["titre"] != "") {
-            $titre = " | {$data["titre"]}";
-        }   
-    ?>
-
-    <title>Nicolas Belvoix<?= htmlspecialchars($titre) ?></title>
-
-    <link rel="stylesheet" href="view/css/animate.min.css">
-    <link rel="stylesheet" href="view/css/style.css?v=6">
+    <link rel="stylesheet" href="view/css/error.css?v=1">
 
     <?php
         if (isset($isMobil) && isset($navigateur) && $isMobil) {
@@ -54,12 +46,13 @@
     <meta name="msapplication-config" content="view/src/favicon/browserconfig.xml">
     <meta name="theme-color" content="#4D4F52">
 
-    <?php if (isset($data["description"]) && $data["description"] != "") { ?>
-        <meta name="description" content="<?= htmlspecialchars(substr($data["description"], 0, 180)); ?>"/>
-    <?php } ?>
-
     <script src="https://kit.fontawesome.com/828b21001a.js" crossorigin="anonymous"></script>
-    <script src="view/js/jquery_compresser.js"></script>
-    <script src="view/js/smooth-scroll.min.js"></script>
-    <script src="view/js/min.compiler.js"></script>
 </head>
+<body>
+    <h1>401</h1>
+    <p>
+    La requête n'a pas été effectuée car il manque des informations d'authentification valides pour la ressource visée
+    </p>
+    <a href="index.php">Revenir sur le site</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/// palette ///
+@import "_colorPalette";
+
+/// base ///
+    @import url('https://fonts.googleapis.com/css?family=Lobster|Source+Sans+Pro:300,400&display=swap');
+    @import "_modelColor";
+
+    html {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+/// color error ///
+
+    @import "color/_error";

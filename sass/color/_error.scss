@@ -1,0 +1,26 @@
+body {
+    background-color: $noir;
+
+    h1 {
+        @extend %titreClaire;
+    }
+
+    h1, p, a {
+        letter-spacing: .1pc;
+    }
+
+    p, a {
+        @extend %textClaire;
+
+        text-shadow: 2px 2px 2px #000;
+    }
+
+    a {
+        text-underline-position: under;
+        transition: .5s;
+
+        &:hover {
+            letter-spacing: .2pc;
+        }
+    }
+}
