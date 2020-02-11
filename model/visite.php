@@ -1,23 +1,29 @@
 <?php
     class visite {
-        private const CHEMIN = "view/src/json/";
-        private const FICHIER = "vue.json";
+        protected $_CHEMIN = "view/src/json/";
+        protected const FICHIER = "vue.json";
 
-        public function __construct () {
-            if (file_exists(self::CHEMIN . self::FICHIER)) {
-                $this->add_visite();
+        public function __construct ($i = true) {
+            if ($i) {
+                if (file_exists($this->_CHEMIN . self::FICHIER)) {
+                    $this->add_visite();
+                }else {
+                    touch($this->_CHEMIN . self::FICHIER);
+                    $this->add_visite();
+                }
             }else {
-                touch(self::CHEMIN . self::FICHIER);
-                $this->add_visite();
+                if (file_exists($this->_CHEMIN . self::FICHIER) == false) {
+                    touch($this->_CHEMIN . self::FICHIER);
+                }
             }
         }
 
         private function add_visite() {
-            $json = json_decode(file_get_contents(self::CHEMIN . self::FICHIER), true);
+            $json = json_decode(file_get_contents($this->_CHEMIN . self::FICHIER), true);
 
             $json[] .= time();
 
-            file_put_contents(self::CHEMIN . self::FICHIER ,json_encode($json));
+            file_put_contents($this->_CHEMIN . self::FICHIER ,json_encode($json));
         }
     }
 ?>
