@@ -22,7 +22,7 @@
                 <section>
                     <img src="<?= htmlspecialchars($img); ?>" alt="image <?= htmlspecialchars($titre); ?>">
                     <h3><?= htmlspecialchars($titre); ?></h3>
-                    <p><?= htmlspecialchars($text); ?></p>
+                    <p><?= nl2br(htmlspecialchars($text)); ?></p>
                 </section>
             <?php } ?>
         </div>
