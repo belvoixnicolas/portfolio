@@ -17,7 +17,7 @@
                         }
                 ?>
                     <section>
-                        <img src="<?= htmlspecialchars($img); ?>" alt="logo de <?= htmlspecialchars($titre); ?>">
+                        <img src="<?= htmlspecialchars($img); ?>" alt="logo de <?= htmlspecialchars($titre); ?>" loading="lazy">
                             <h3><?= htmlspecialchars($titre); ?></h3>
                     </section>
                 <?php } ?>

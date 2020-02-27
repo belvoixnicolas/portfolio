@@ -20,7 +20,7 @@
                     }
             ?>
                 <section>
-                    <img src="<?= htmlspecialchars($img); ?>" alt="image <?= htmlspecialchars($titre); ?>">
+                    <img src="<?= htmlspecialchars($img); ?>" alt="image <?= htmlspecialchars($titre); ?>" loading="lazy">
                     <h3><?= htmlspecialchars($titre); ?></h3>
                     <p><?= nl2br(htmlspecialchars($text)); ?></p>
                 </section>

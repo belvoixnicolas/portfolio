@@ -1,5 +1,5 @@
 <nav id="nav" class="hidden">
-    <img src="view/src/logo/logo.svg" alt="Logo site web">
+    <img src="view/src/logo/logo.svg" alt="Logo site web" loading="lazy">
 
     <ul class="hidden">
         <li>

@@ -4,7 +4,7 @@
     <button id="fermer"><i class="fas fa-times"></i></button>
 
     <div class="conteneur">
-        <img id="imgSite" format="" src="" alt="">
+        <img id="imgSite" format="" src="" alt="" loading="lazy">
     </div>
 
     <div class="description">
