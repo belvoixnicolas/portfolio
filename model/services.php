@@ -15,7 +15,7 @@
             if ($this->verifChemin()) {
                 $json = json_decode(file_get_contents($this->_CHEMIN), true);
 
-                if ($json) {
+                if (is_array($json) && $json !== false) {
                     if ($originale == false) {
                         foreach ($json as $key => $value) {
                             if (file_exists($this->_CHEMIN_IMG . $value["img"]) && is_null($value["img"]) == false && strlen($value["img"]) > 0) {

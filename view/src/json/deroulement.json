@@ -1,1 +1,1 @@
-{"test 3":{"img":"SVG_Logo.png","text":"Lorem machin"},"test 4":{"img":"SVG_Logo.png","text":"Lorem machin"}}
+{"Test":{"img":"Test.jpg","text":"Court texte pour voir si sa marche."},"Modifier":{"text":"Ce texte a \u00e9t\u00e9 modifier !","img":"Modifier.jpg"},"Test pour mobile":{"img":"Test_pour_mobile.jpg","text":"Courte texte pour tester sur mobile."}}
