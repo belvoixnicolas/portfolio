@@ -1,9 +1,13 @@
 <?php
-    require_once("model/connect.php");
+    if (file_exists("model/connect.php")) {
+        require_once("model/connect.php");
+    }else {
+        require_once("../portfolio/model/connect.php");
+    }
 
     class portfolio extends connect {
-        private const CHEMIN = "view/src/data_site/";
-        private const CHEMIN_APK = "view/src/apk/";
+        protected $_CHEMIN = "view/src/data_site/";
+        protected $_CHEMIN_APK = "view/src/apk/";
 
         public function getSites() {
             $sites = array();
@@ -214,8 +218,8 @@
         }
 
         private function imgOrientation($fichier) {
-            if (file_exists(self::CHEMIN . $fichier)) {
-                $infoImg = getimagesize(self::CHEMIN . $fichier);
+            if (file_exists($this->_CHEMIN . $fichier)) {
+                $infoImg = getimagesize($this->_CHEMIN . $fichier);
 
                 if ($infoImg) {
                     list($width, $height) = $infoImg;
@@ -248,7 +252,7 @@
         }
 
         private function verfiapk($url) {
-            if (file_exists(self::CHEMIN_APK . $url)) {
+            if (file_exists($this->_CHEMIN_APK . $url)) {
                 return true;
             }else {
                 return false;

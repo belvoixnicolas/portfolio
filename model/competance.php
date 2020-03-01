@@ -1,26 +1,28 @@
 <?php
     class competance {
-        private const CHEMIN = "view/src/json/competance.json";
-        private const CHEMIN_IMG = "view/src/data_competance/";
+        protected $_CHEMIN = "view/src/json/competance.json";
+        protected $_CHEMIN_IMG = "view/src/data_competance/";
 
         public function __construct() {
             if ($this->verifChemin() == false) {
                 $array = array();
 
-                file_put_contents(self::CHEMIN, json_encode($array));
+                file_put_contents($this->_CHEMIN, json_encode($array));
             }
         }
 
-        public function getCompetance() {
+        public function getCompetance($originale = false) {
             if ($this->verifChemin()) {
-                $json = json_decode(file_get_contents(self::CHEMIN), true);
+                $json = json_decode(file_get_contents($this->_CHEMIN), true);
 
-                if ($json) {
-                    foreach ($json as $key => $value) {
-                        if (file_exists(self::CHEMIN_IMG . $value["img"])) {
-                            $json[$key]["img"] = self::CHEMIN_IMG . $value["img"];
-                        }else {
-                            $json[$key]["img"] = null;
+                if (is_array($json) && $json !== false) {
+                    if ($originale == false) {
+                        foreach ($json as $key => $value) {
+                            if (file_exists($this->_CHEMIN_IMG . $value["img"]) && is_null($value["img"]) == false && strlen($value["img"]) > 0) {
+                                $json[$key]["img"] = $this->_CHEMIN_IMG . $value["img"];
+                            }else {
+                                $json[$key]["img"] = null;
+                            }
                         }
                     }
 
@@ -34,14 +36,14 @@
         }
 
         private function verifChemin() {
-            if (file_exists(self::CHEMIN)) {
+            if (file_exists($this->_CHEMIN)) {
                 return true;
             }else{
                 return false;
             }
         }
 
-        private function modelTableCompetance($img) {
+        protected function modelTableCompetance($img) {
             return array(
                 "img" => $img,
             );
