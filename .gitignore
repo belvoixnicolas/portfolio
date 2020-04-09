@@ -2,6 +2,7 @@
 /.sass-cache
 /doc
 /view/src/logo
+/view/src/favicon
 /package.json
 /package-lock.json
 /model/connect.php
